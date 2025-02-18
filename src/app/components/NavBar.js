@@ -10,7 +10,7 @@ const Navbar = () => {
   return (
     <nav className="bg-dark-gray text-white p-4 shadow-md fixed top-0 left-0 w-full z-10">
       <div className="container mx-auto flex justify-between items-center">
-        <div className="text-2xl font-bold text-light-blue">
+        <div className="text-3xl font-bold text-light-blue">
           <Link href="/">Samson Lukhele</Link>
         </div>
         {/* Desktop Links */}
@@ -69,7 +69,7 @@ const Navbar = () => {
           <li>
             <Link
               href="#about"
-              className="hover:text-soft-yellow transition duration-300"
+              className="hover:text-light-blue transition duration-300"
               onClick={() => setIsMenuOpen(false)}
             >
               About
@@ -78,7 +78,7 @@ const Navbar = () => {
           <li>
             <Link
               href="#projects"
-              className="hover:text-soft-yellow transition duration-300"
+              className="hover:text-light-blue transition duration-300"
               onClick={() => setIsMenuOpen(false)}
             >
               Projects
@@ -87,7 +87,7 @@ const Navbar = () => {
           <li>
             <Link
               href="#contact"
-              className="hover:text-soft-yellow transition duration-300"
+              className="hover:text-light-blue transition duration-300"
               onClick={() => setIsMenuOpen(false)}
             >
               Contact
