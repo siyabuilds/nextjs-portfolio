@@ -18,7 +18,7 @@ const Navbar = () => {
           <li>
             <Link
               href="/about"
-              className="hover:text-soft-yellow transition duration-300"
+              className="px-4 py-4 rounded-lg bg-transparent hover:bg-light-blue hover:text-dark-gray transition-all duration-200"
             >
               About
             </Link>
@@ -26,7 +26,7 @@ const Navbar = () => {
           <li>
             <Link
               href="/projects"
-              className="hover:text-soft-yellow transition duration-300"
+              className="px-4 py-4 rounded-lg bg-transparent hover:bg-light-blue hover:text-dark-gray transition-all duration-200"
             >
               Projects
             </Link>
@@ -34,7 +34,7 @@ const Navbar = () => {
           <li>
             <Link
               href="/contact"
-              className="hover:text-soft-yellow transition duration-300"
+              className="px-4 py-4 rounded-lg bg-transparent hover:bg-light-blue hover:text-dark-gray transition-all duration-200"
             >
               Contact
             </Link>
