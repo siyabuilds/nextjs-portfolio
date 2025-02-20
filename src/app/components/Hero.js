@@ -35,9 +35,9 @@ const Hero = () => {
         <h1 className="text-6xl sm:text-4xl font-bold">
           Hi, I am Samson Lukhele.
         </h1>
-        <p className="text sm:text-2xl mt-4">
+        <p className="text-2xl mt-4">
           I'm a{" "}
-          <span className="font-mono text-light-blue rounded-md">
+          <span className="font-mono text-light-blue rounded-md text-bold">
             ["
             <span ref={el} />
             "]
