@@ -43,7 +43,7 @@ const Navbar = () => {
 
         {/* Hamburger Icon for Mobile */}
         <button
-          className="md:hidden text-white border-2 border-white rounded-lg p-2 transition-all duration-300 hover:border-white hover:bg-white/10 hover:shadow-[0_0_10px_rgba(255,255,255,0.6)]"
+          className="md:hidden text-white border-2 border-white rounded-lg p-2 transition-all duration-300 hover:border-white hover:bg-white/10 hover:shadow-[0_0_10px_rgba(173,216,230,0.6)]"
           onClick={toggleMenu}
         >
           <svg
