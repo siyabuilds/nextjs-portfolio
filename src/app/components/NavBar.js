@@ -68,7 +68,7 @@ const Navbar = () => {
         <ul className="md:hidden flex flex-col items-center space-y-4 mt-4">
           <li>
             <Link
-              href="#about"
+              href="/about"
               className="hover:text-light-blue transition duration-300"
               onClick={() => setIsMenuOpen(false)}
             >
@@ -77,7 +77,7 @@ const Navbar = () => {
           </li>
           <li>
             <Link
-              href="#projects"
+              href="/projects"
               className="hover:text-light-blue transition duration-300"
               onClick={() => setIsMenuOpen(false)}
             >
@@ -86,7 +86,7 @@ const Navbar = () => {
           </li>
           <li>
             <Link
-              href="#contact"
+              href="/contact"
               className="hover:text-light-blue transition duration-300"
               onClick={() => setIsMenuOpen(false)}
             >
