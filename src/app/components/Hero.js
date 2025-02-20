@@ -17,7 +17,7 @@ const Hero = () => {
       ],
       typeSpeed: 75,
       backSpeed: 60,
-      loop: false,
+      loop: true,
       showCursor: false,
       contentType: "html",
     };
