@@ -15,7 +15,7 @@ const Hero = () => {
         "DevOps Engineer",
         "Learner",
       ],
-      typeSpeed: 45,
+      typeSpeed: 75,
       backSpeed: 60,
       loop: false,
       showCursor: false,
