@@ -65,7 +65,7 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       {isMenuOpen && (
-        <ul className="md:hidden flex flex-col items-center space-y-4 mt-4">
+        <ul className="md:hidden flex flex-col items-center space-y-4 mt-4 z-20">
           <li>
             <Link
               href="/about"
