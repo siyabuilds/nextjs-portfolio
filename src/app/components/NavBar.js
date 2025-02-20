@@ -69,7 +69,7 @@ const Navbar = () => {
           <li>
             <Link
               href="/about"
-              className="hover:text-light-blue transition duration-300"
+              className="hover:text-light-blue transition duration-300 text-2xl"
               onClick={() => setIsMenuOpen(false)}
             >
               About
@@ -78,7 +78,7 @@ const Navbar = () => {
           <li>
             <Link
               href="/projects"
-              className="hover:text-light-blue transition duration-300"
+              className="hover:text-light-blue transition duration-300 text-2xl"
               onClick={() => setIsMenuOpen(false)}
             >
               Projects
@@ -87,7 +87,7 @@ const Navbar = () => {
           <li>
             <Link
               href="/contact"
-              className="hover:text-light-blue transition duration-300"
+              className="hover:text-light-blue transition duration-300 text-2xl"
               onClick={() => setIsMenuOpen(false)}
             >
               Contact
