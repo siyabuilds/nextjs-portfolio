@@ -9,7 +9,7 @@ const Hero = () => {
   const el = useRef(null);
   useEffect(() => {
     const options = {
-      strings: ["Web Developer", "Linux Admin", "Learner"],
+      strings: ["Web Developer", "UI/UX Designer", "Learner"],
       typeSpeed: 75,
       backSpeed: 60,
       loop: true,
