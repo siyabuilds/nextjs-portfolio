@@ -53,7 +53,7 @@ const Hero = () => {
           </Link>
           <Link
             href="/projects"
-            className="inline-block border border-light-blue text-light-blue-500 py-3 px-6 rounded-lg hover:bg-light-blue hover:text-white transition duration-300 text-lg"
+            className="inline-block border border-light-blue text-light-blue py-3 px-6 rounded-lg hover:bg-light-blue hover:text-white transition duration-300 text-lg"
           >
             Projects
           </Link>
