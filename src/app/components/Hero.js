@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useRef } from "react";
-import Image from "next/image";
 import Link from "next/link";
 import Typed from "typed.js";
 
@@ -12,7 +11,7 @@ const Hero = () => {
       strings: ["Web Developer", "UI/UX Designer", "Learner"],
       typeSpeed: 75,
       backSpeed: 60,
-      loop: true,
+      loop: false,
       showCursor: false,
       contentType: "html",
     };
@@ -45,6 +44,20 @@ const Hero = () => {
           </span>
           .
         </p>
+        <div className="mt-6">
+          <Link
+            href="/about"
+            className="inline-block bg-gradient-to-r from-blue-500 to-blue-400 text-white py-3 px-6 rounded-lg hover:from-blue-400 hover:to-blue-500 transition-all duration-300 mr-4 text-lg"
+          >
+            About
+          </Link>
+          <Link
+            href="/projects"
+            className="inline-block border border-light-blue text-light-blue-500 py-3 px-6 rounded-lg hover:bg-light-blue hover:text-white transition duration-300 text-lg"
+          >
+            Projects
+          </Link>
+        </div>
       </div>
     </section>
   );
