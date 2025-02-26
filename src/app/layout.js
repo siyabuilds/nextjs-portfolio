@@ -41,6 +41,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+        />
         <meta name="description" content={metadata.description} />
         <meta name="keywords" content={metadata.keywords} />
         <meta property="og:title" content={metadata.openGraph.title} />
