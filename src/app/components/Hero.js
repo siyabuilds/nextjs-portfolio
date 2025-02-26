@@ -8,7 +8,7 @@ const Hero = () => {
   const el = useRef(null);
   useEffect(() => {
     const options = {
-      strings: ["Web Developer", "UI/UX Designer", "Learner"],
+      strings: ["Web Developer", "UI/UX Designer", "DevOps Engineer", "Learner"],
       typeSpeed: 75,
       backSpeed: 60,
       loop: false,
