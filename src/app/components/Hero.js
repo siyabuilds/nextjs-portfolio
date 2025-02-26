@@ -36,11 +36,11 @@ const Hero = () => {
           Hi, I am Samson Lukhele.
         </h1>
         <p className="text-2xl mt-4">
-          I'm a{" "}
+          I&#39;m a{" "}
           <span className="font-mono text-light-blue rounded-md text-bold">
-            ["
+            [&quot;
             <span ref={el} />
-            "]
+            &quot;]
           </span>
           .
         </p>
