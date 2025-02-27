@@ -8,7 +8,12 @@ const Hero = () => {
   const el = useRef(null);
   useEffect(() => {
     const options = {
-      strings: ["Web Developer", "UI/UX Designer", "DevOps Engineer", "Learner"],
+      strings: [
+        "Web Developer",
+        "UI/UX Designer",
+        "DevOps Engineer",
+        "Learner",
+      ],
       typeSpeed: 75,
       backSpeed: 60,
       loop: false,
@@ -23,19 +28,19 @@ const Hero = () => {
   }, []);
 
   return (
-    <section className="flex flex-col md:flex-row items-center justify-center min-h-screen text-center text-white p-8">
+    <section className="flex flex-col md:flex-row items-center justify-center min-h-screen text-center text-white p-8 md:p-12">
       <div className="md:w-1/3 mb-4 md:mb-0">
         <img
           src="https://github.com/markuptitan.png"
           alt="Avatar"
-          className="rounded-full w-64 h-64 md:w-48 md:h-48 mx-auto"
+          className="rounded-full w-64 h-64 md:w-48 md:h-48 mx-auto transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-light-blue"
         />
       </div>
       <div className="md:w-2/3 mt-4 md:mt-0">
-        <h1 className="text-6xl sm:text-4xl font-bold">
+        <h1 className="text-6xl sm:text-4xl md:text-7xl font-bold">
           Hi, I am Samson Lukhele.
         </h1>
-        <p className="text-2xl mt-4">
+        <p className="text-2xl sm:text-lg md:text-3xl mt-4">
           I&#39;m a{" "}
           <span className="font-mono text-light-blue rounded-md text-bold">
             [&quot;
