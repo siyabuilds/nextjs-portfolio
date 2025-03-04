@@ -19,17 +19,17 @@ const About = () => {
             something great!
           </p>
           <div className="font-mono flex flex-wrap gap-4 justify-center py-4">
-            <span className="bg-blue-600 text-white font-bold py-2 px-4 rounded-lg shadow-lg transition-transform duration-300 hover:bg-blue-500 hover:-translate-y-1">
+            <span className="bg-green-500 text-white font-bold py-2 px-4 rounded-lg shadow-lg transition-transform duration-300 hover:bg-green-700 hover:-translate-y-1">
               <i className="fa fa-globe mr-2"></i>Web Developer
             </span>
-            <span className="bg-green-600 text-white font-bold py-2 px-4 rounded-lg shadow-lg transition-transform duration-300 hover:bg-green-500 hover:-translate-y-1">
+            <span className="bg-orange-500 text-white font-bold py-2 px-4 rounded-lg shadow-lg transition-transform duration-300 hover:bg-orange-700 hover:-translate-y-1">
               <i className="fab fa-linux mr-2" aria-hidden="true"></i>
               Linux Engineer
             </span>
-            <span className="bg-purple-600 text-white font-bold py-2 px-4 rounded-lg shadow-lg transition-transform duration-300 hover:bg-purple-500 hover:-translate-y-1">
+            <span className="bg-blue-500 text-white font-bold py-2 px-4 rounded-lg shadow-lg transition-transform duration-300 hover:bg-blue-700 hover:-translate-y-1">
               <i className="fa fa-code-fork mr-2"></i>DevOps Engineer
             </span>
-            <span className="bg-teal-600 text-white font-bold py-2 px-4 rounded-lg shadow-lg transition-transform duration-300 hover:bg-teal-500 hover:-translate-y-1">
+            <span className="bg-purple-500 text-white font-bold py-2 px-4 rounded-lg shadow-lg transition-transform duration-300 hover:bg-purple-700 hover:-translate-y-1">
               <i className="fa fa-graduation-cap mr-2" aria-hidden="true"></i>
               Continuous Learner
             </span>
@@ -42,54 +42,54 @@ const About = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {/* Frontend */}
-            <div className="bg-blue-600 rounded-lg shadow-lg p-6 hover:scale-105 transition-transform duration-300">
+            <div className="bg-green-600 rounded-lg shadow-lg p-6 hover:scale-105 transition-transform duration-300">
               <h3 className="text-2xl font-bold flex items-center">
                 <i className="fas fa-code mr-2"></i> Frontend
               </h3>
               <div className="mt-3 space-y-3">
-                <div className="bg-blue-500 p-3 rounded-lg text-lg flex items-center hover:bg-blue-400 transition-colors duration-300">
+                <div className="bg-green-500 p-3 rounded-lg text-lg flex items-center hover:bg-green-400 transition-colors duration-300">
                   <i className="fab fa-js-square mr-2"></i> JavaScript
                 </div>
-                <div className="bg-blue-500 p-3 rounded-lg text-lg flex items-center hover:bg-blue-400 transition-colors duration-300">
+                <div className="bg-green-500 p-3 rounded-lg text-lg flex items-center hover:bg-green-400 transition-colors duration-300">
                   <i className="fab fa-react mr-2"></i> React
                 </div>
-                <div className="bg-blue-500 p-3 rounded-lg text-lg flex items-center hover:bg-blue-400 transition-colors duration-300">
+                <div className="bg-green-500 p-3 rounded-lg text-lg flex items-center hover:bg-green-400 transition-colors duration-300">
                   <i className="fab fa-html5 mr-2"></i> HTML & CSS
                 </div>
               </div>
             </div>
 
             {/* Backend */}
-            <div className="bg-green-600 rounded-lg shadow-lg p-6 hover:scale-105 transition-transform duration-300">
+            <div className="bg-orange-600 rounded-lg shadow-lg p-6 hover:scale-105 transition-transform duration-300">
               <h3 className="text-2xl font-bold flex items-center">
                 <i className="fas fa-server mr-2"></i> Backend
               </h3>
               <div className="mt-3 space-y-3">
-                <div className="bg-green-500 p-3 rounded-lg text-lg flex items-center hover:bg-green-400 transition-colors duration-300">
+                <div className="bg-orange-500 p-3 rounded-lg text-lg flex items-center hover:bg-orange-400 transition-colors duration-300">
                   <i className="fab fa-node-js mr-2"></i> Node.js
                 </div>
-                <div className="bg-green-500 p-3 rounded-lg text-lg flex items-center hover:bg-green-400 transition-colors duration-300">
+                <div className="bg-orange-500 p-3 rounded-lg text-lg flex items-center hover:bg-orange-400 transition-colors duration-300">
                   <i className="fas fa-code mr-2"></i> APIs
                 </div>
-                <div className="bg-green-500 p-3 rounded-lg text-lg flex items-center hover:bg-green-400 transition-colors duration-300">
+                <div className="bg-orange-500 p-3 rounded-lg text-lg flex items-center hover:bg-orange-400 transition-colors duration-300">
                   <i className="fas fa-database mr-2"></i> SQL
                 </div>
               </div>
             </div>
 
             {/* DevOps */}
-            <div className="bg-orange-600 rounded-lg shadow-lg p-6 hover:scale-105 transition-transform duration-300">
+            <div className="bg-blue-600 rounded-lg shadow-lg p-6 hover:scale-105 transition-transform duration-300">
               <h3 className="text-2xl font-bold flex items-center">
                 <i className="fas fa-tools mr-2"></i> DevOps
               </h3>
               <div className="mt-3 space-y-3">
-                <div className="bg-orange-500 p-3 rounded-lg text-lg flex items-center hover:bg-orange-400 transition-colors duration-300">
+                <div className="bg-blue-500 p-3 rounded-lg text-lg flex items-center hover:bg-blue-400 transition-colors duration-300">
                   <i className="fab fa-docker mr-2"></i> Docker
                 </div>
-                <div className="bg-orange-500 p-3 rounded-lg text-lg flex items-center hover:bg-orange-400 transition-colors duration-300">
+                <div className="bg-blue-500 p-3 rounded-lg text-lg flex items-center hover:bg-blue-400 transition-colors duration-300">
                   <i className="fas fa-sync-alt mr-2"></i> CI/CD
                 </div>
-                <div className="bg-orange-500 p-3 rounded-lg text-lg flex items-center hover:bg-orange-400 transition-colors duration-300">
+                <div className="bg-blue-500 p-3 rounded-lg text-lg flex items-center hover:bg-blue-400 transition-colors duration-300">
                   <i className="fab fa-git mr-2"></i> Git
                 </div>
               </div>
