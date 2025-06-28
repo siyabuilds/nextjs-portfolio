@@ -35,7 +35,7 @@ const samson = {
   useEffect(() => {
     const typed = new Typed(typedRef.current, {
       strings: [
-        "Building clean, modern web experiences <br />on the edge of <span class='text-rose-400'>tech</span>",
+        "Building clean, modern web experiences <br />on the edge of <span class='text-rose-400'>tech</span><span class='text-white'>.</span>",
       ],
       typeSpeed: 50,
       startDelay: 500,
