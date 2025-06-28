@@ -13,22 +13,22 @@ const samson = {
   name: "Samson Lukhele",
   aliases: ["Spha", "siyabuilds"],
   role: "Full Stack Web Developer",
-  learning: ["React", "Next.js", "TypeScript", "Finance", "Design Thinking"],
-  currentProjects: [
-    "Mock Banking API",
-    "Task Manager (TS + PostgreSQL + Docker)",
-  ],
-  stack: {
-    frontend: ["React", "Next.js", "ShadCN", "Framer Motion"],
-    backend: ["Node.js", "Express", "PostgreSQL", "Docker"],
-    tools: ["GitHub Actions", "DigitalOcean", "Azure"],
-  },
+  mission: "Crafting accessible and intelligent digital experiences.",
   affiliation: "Umuzi Experience Labs",
-  mission: "To build helpful, accessible, and intelligent web experiences.",
-  nextSteps: [
-    "Finish Task Manager",
-    "Deploy with Docker",
-    "Push to open source",
+  techStack: {
+    frontend: ["React", "Next.js", "ShadCN", "Framer Motion"],
+    backend: ["Node.js", "PostgreSQL", "Docker"],
+    devOps: ["GitHub Actions", "DigitalOcean", "Azure"],
+  },
+  featuredProjects: [
+    "Task Manager (TypeScript + PostgreSQL + Docker)",
+    "Mock Banking API",
+  ],
+  focusAreas: ["TypeScript", "Design Thinking", "Modern UI/UX"],
+  roadmap: [
+    "Launch Task Manager",
+    "Dockerize and Deploy",
+    "Contribute to Open Source",
   ],
 };`;
 
@@ -40,7 +40,7 @@ const samson = {
       typeSpeed: 50,
       startDelay: 500,
       showCursor: true,
-      cursorChar: "_", 
+      cursorChar: "_",
       onComplete: () => setTypingComplete(true),
     });
 
