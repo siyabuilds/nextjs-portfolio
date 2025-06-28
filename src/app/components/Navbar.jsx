@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
+import Link from "next/link";
 
 const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -11,15 +12,18 @@ const NavBar = () => {
     <nav className="w-full bg-black text-white shadow-md fixed top-0 left-0 z-50">
       <div className="max-w-7xl mx-auto px-6 md:px-12 py-4 flex justify-between items-center">
         {/* Logo/Brand */}
-        <a href="/" className="text-2xl font-bold tracking-wide text-rose-400">
+        <Link
+          href="/"
+          className="text-2xl font-bold tracking-wide text-rose-400"
+        >
           siyabuilds.tech
-        </a>
+        </Link>
 
         {/* Desktop Links */}
         <div className="hidden md:flex gap-8 font-mono text-sm">
-          <a href="#about" className="hover:text-rose-300 transition">
+          <Link href="/about" className="hover:text-rose-300 transition">
             about
-          </a>
+          </Link>
           <a href="#projects" className="hover:text-rose-300 transition">
             projects
           </a>
@@ -43,13 +47,13 @@ const NavBar = () => {
       {/* Mobile Menu */}
       {isOpen && (
         <div className="md:hidden px-6 pb-4 pt-2 space-y-4 bg-black font-mono text-sm">
-          <a
-            href="#about"
+          <Link
+            href="/about"
             className="block hover:text-rose-300 transition"
             onClick={toggleMenu}
           >
             about
-          </a>
+          </Link>
           <a
             href="#projects"
             className="block hover:text-rose-300 transition"
