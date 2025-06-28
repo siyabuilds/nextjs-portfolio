@@ -77,7 +77,6 @@ const samson = {
             </div>
           </motion.h1>
 
-          {/* Always render these elements to maintain consistent layout, but with conditional opacity */}
           <motion.p
             initial={{ opacity: 0 }}
             animate={{ opacity: typingComplete ? 1 : 0 }}
@@ -85,9 +84,9 @@ const samson = {
             className="text-white/60 max-w-lg"
             aria-hidden={!typingComplete}
           >
-            I'm Sam — a frontend dev building smooth, responsive UIs with React,
-            Next.js, and some DevOps sauce on the side. Powered by Linux and a
-            love for clean code.
+            I'm Siyabonga — a Full Stack Web Developer in training with Umuzi
+            Experience Labs. Passionate about building accessible, modern web
+            experiences and always eager to learn more.
           </motion.p>
 
           {/* CodeBlock for mobile - always rendered for layout consistency */}
