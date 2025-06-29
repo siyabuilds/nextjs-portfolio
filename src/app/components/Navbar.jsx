@@ -25,9 +25,9 @@ const NavBar = () => {
           <Link href="/about" className="hover:text-rose-300 transition">
             about
           </Link>
-          <a href="#projects" className="hover:text-rose-300 transition">
+          <Link href="/projects" className="hover:text-rose-300 transition">
             projects
-          </a>
+          </Link>
           <Link href="/contact" className="hover:text-rose-300 transition">
             contact
           </Link>
@@ -56,42 +56,42 @@ const NavBar = () => {
         {isOpen && (
           <motion.div
             initial={{ height: 0, opacity: 0 }}
-            animate={{ 
-              height: "auto", 
+            animate={{
+              height: "auto",
               opacity: 1,
               transition: {
                 height: { duration: 0.3, ease: "easeOut" },
-                opacity: { duration: 0.2, delay: 0.1 }
-              }
+                opacity: { duration: 0.2, delay: 0.1 },
+              },
             }}
-            exit={{ 
-              height: 0, 
+            exit={{
+              height: 0,
               opacity: 0,
               transition: {
                 height: { duration: 0.3, ease: "easeIn" },
-                opacity: { duration: 0.1 }
-              }
+                opacity: { duration: 0.1 },
+              },
             }}
             className="md:hidden overflow-hidden bg-black border-t border-white/10"
           >
-            <motion.div 
+            <motion.div
               className="px-6 pb-4 pt-2 space-y-4 font-mono text-sm"
               initial="closed"
               animate="open"
               exit="closed"
               variants={{
                 open: {
-                  transition: { staggerChildren: 0.1, delayChildren: 0.2 }
+                  transition: { staggerChildren: 0.1, delayChildren: 0.2 },
                 },
                 closed: {
-                  transition: { staggerChildren: 0.05, staggerDirection: -1 }
-                }
+                  transition: { staggerChildren: 0.05, staggerDirection: -1 },
+                },
               }}
             >
               <motion.div
                 variants={{
                   open: { y: 0, opacity: 1 },
-                  closed: { y: -10, opacity: 0 }
+                  closed: { y: -10, opacity: 0 },
                 }}
                 transition={{ duration: 0.2 }}
               >
@@ -106,22 +106,22 @@ const NavBar = () => {
               <motion.div
                 variants={{
                   open: { y: 0, opacity: 1 },
-                  closed: { y: -10, opacity: 0 }
+                  closed: { y: -10, opacity: 0 },
                 }}
                 transition={{ duration: 0.2 }}
               >
-                <a
-                  href="#projects"
+                <Link
+                  href="/projects"
                   className="block hover:text-rose-300 transition-colors duration-200 py-2"
                   onClick={toggleMenu}
                 >
                   projects
-                </a>
+                </Link>
               </motion.div>
               <motion.div
                 variants={{
                   open: { y: 0, opacity: 1 },
-                  closed: { y: -10, opacity: 0 }
+                  closed: { y: -10, opacity: 0 },
                 }}
                 transition={{ duration: 0.2 }}
               >

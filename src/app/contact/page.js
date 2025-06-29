@@ -51,7 +51,7 @@ const contactInfo = {
   useEffect(() => {
     const typed = new Typed(typedRef.current, {
       strings: [
-        "Let's build something <span class='text-rose-400'>amazing</span> together<span class='text-white'>.</span>",
+        "Let&apos;s build something <span class='text-rose-400'>amazing</span> together<span class='text-white'>.</span>",
       ],
       typeSpeed: 50,
       startDelay: 500,
@@ -168,8 +168,8 @@ const contactInfo = {
               aria-hidden={!typingComplete}
             >
               Have a project in mind, want to collaborate, or just want to say
-              hello? I'd love to hear from you. Let's connect and create
-              something meaningful together.
+              hello? I&apos;d love to hear from you. Let&apos;s connect and
+              create something meaningful together.
             </motion.p>
 
             {/* Mobile CodeBlock */}
@@ -515,8 +515,8 @@ const contactInfo = {
           </h2>
           <p className="text-white/60 max-w-2xl mx-auto">
             Whether you have a project idea, need a development partner, or just
-            want to connect with a fellow developer, I'm always excited to meet
-            new people and explore opportunities.
+            want to connect with a fellow developer, I&apos;m always excited to
+            meet new people and explore opportunities.
           </p>
           <div className="flex items-center justify-center gap-4">
             <a

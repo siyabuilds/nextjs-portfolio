@@ -299,7 +299,7 @@ const aboutSamson = {
               get in touch
             </a>
             <a
-              href="#projects"
+              href="/projects"
               className="text-white/70 hover:underline text-sm font-mono"
               tabIndex={typingComplete ? 0 : -1}
             >

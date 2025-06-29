@@ -4,10 +4,10 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        "ibm-sans": ["IBM Plex Sans", "system-ui", "sans-serif"],
-        "ibm-mono": ["IBM Plex Mono", "Courier New", "monospace"],
-        sans: ["IBM Plex Sans", "system-ui", "sans-serif"],
-        mono: ["IBM Plex Mono", "Courier New", "monospace"],
+        "ibm-sans": ["var(--font-ibm-plex-sans)", "system-ui", "sans-serif"],
+        "ibm-mono": ["var(--font-ibm-plex-mono)", "Courier New", "monospace"],
+        sans: ["var(--font-ibm-plex-sans)", "system-ui", "sans-serif"],
+        mono: ["var(--font-ibm-plex-mono)", "Courier New", "monospace"],
       },
     },
   },
