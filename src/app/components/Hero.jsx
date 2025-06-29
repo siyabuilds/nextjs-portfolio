@@ -49,15 +49,6 @@ const samson = {
 
   return (
     <section className="relative text-white min-h-screen px-6 md:px-16 py-12 overflow-hidden">
-      {/* Background Grid Pattern */}
-      <div className="absolute right-0 top-0 w-full h-full hidden lg:block pointer-events-none z-0">
-        <div className="grid grid-cols-6 gap-4 opacity-5 w-full h-full">
-          {[...Array(36)].map((_, i) => (
-            <div key={i} className="bg-white/10 aspect-square"></div>
-          ))}
-        </div>
-      </div>
-
       {/* Main Content */}
       <div className="relative z-10 flex flex-col lg:grid lg:grid-cols-2 items-center gap-12">
         {/* Left Side */}
