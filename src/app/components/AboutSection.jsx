@@ -292,7 +292,7 @@ const aboutSamson = {
           </p>
           <div className="flex items-center justify-center gap-4">
             <a
-              href="#contact"
+              href="/contact"
               className="bg-rose-300 px-6 py-3 text-black text-sm font-mono rounded-md shadow hover:bg-rose-400 transition"
               tabIndex={typingComplete ? 0 : -1}
             >

@@ -111,7 +111,7 @@ const samson = {
               view projects
             </a>
             <a
-              href="#contact"
+              href="/contact"
               className="text-white/70 hover:underline text-sm font-mono"
               tabIndex={typingComplete ? 0 : -1}
             >
