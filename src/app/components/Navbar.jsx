@@ -2,6 +2,7 @@
 import { useState } from "react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
+import { motion, AnimatePresence } from "framer-motion";
 
 const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -27,49 +28,115 @@ const NavBar = () => {
           <a href="#projects" className="hover:text-rose-300 transition">
             projects
           </a>
-          <a href="#contact" className="hover:text-rose-300 transition">
+          <Link href="/contact" className="hover:text-rose-300 transition">
             contact
-          </a>
+          </Link>
         </div>
 
         {/* Mobile Hamburger */}
         <div className="md:hidden">
-          <button onClick={toggleMenu} className="focus:outline-none">
-            {isOpen ? (
-              <XMarkIcon className="h-6 w-6 text-white" />
-            ) : (
-              <Bars3Icon className="h-6 w-6 text-white" />
-            )}
+          <button onClick={toggleMenu} className="focus:outline-none relative">
+            <motion.div
+              initial={false}
+              animate={{ rotate: isOpen ? 90 : 0 }}
+              transition={{ duration: 0.2 }}
+            >
+              {isOpen ? (
+                <XMarkIcon className="h-6 w-6 text-white" />
+              ) : (
+                <Bars3Icon className="h-6 w-6 text-white" />
+              )}
+            </motion.div>
           </button>
         </div>
       </div>
 
       {/* Mobile Menu */}
-      {isOpen && (
-        <div className="md:hidden px-6 pb-4 pt-2 space-y-4 bg-black font-mono text-sm">
-          <Link
-            href="/about"
-            className="block hover:text-rose-300 transition"
-            onClick={toggleMenu}
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ 
+              height: "auto", 
+              opacity: 1,
+              transition: {
+                height: { duration: 0.3, ease: "easeOut" },
+                opacity: { duration: 0.2, delay: 0.1 }
+              }
+            }}
+            exit={{ 
+              height: 0, 
+              opacity: 0,
+              transition: {
+                height: { duration: 0.3, ease: "easeIn" },
+                opacity: { duration: 0.1 }
+              }
+            }}
+            className="md:hidden overflow-hidden bg-black border-t border-white/10"
           >
-            about
-          </Link>
-          <a
-            href="#projects"
-            className="block hover:text-rose-300 transition"
-            onClick={toggleMenu}
-          >
-            projects
-          </a>
-          <a
-            href="#contact"
-            className="block hover:text-rose-300 transition"
-            onClick={toggleMenu}
-          >
-            contact
-          </a>
-        </div>
-      )}
+            <motion.div 
+              className="px-6 pb-4 pt-2 space-y-4 font-mono text-sm"
+              initial="closed"
+              animate="open"
+              exit="closed"
+              variants={{
+                open: {
+                  transition: { staggerChildren: 0.1, delayChildren: 0.2 }
+                },
+                closed: {
+                  transition: { staggerChildren: 0.05, staggerDirection: -1 }
+                }
+              }}
+            >
+              <motion.div
+                variants={{
+                  open: { y: 0, opacity: 1 },
+                  closed: { y: -10, opacity: 0 }
+                }}
+                transition={{ duration: 0.2 }}
+              >
+                <Link
+                  href="/about"
+                  className="block hover:text-rose-300 transition-colors duration-200 py-2"
+                  onClick={toggleMenu}
+                >
+                  about
+                </Link>
+              </motion.div>
+              <motion.div
+                variants={{
+                  open: { y: 0, opacity: 1 },
+                  closed: { y: -10, opacity: 0 }
+                }}
+                transition={{ duration: 0.2 }}
+              >
+                <a
+                  href="#projects"
+                  className="block hover:text-rose-300 transition-colors duration-200 py-2"
+                  onClick={toggleMenu}
+                >
+                  projects
+                </a>
+              </motion.div>
+              <motion.div
+                variants={{
+                  open: { y: 0, opacity: 1 },
+                  closed: { y: -10, opacity: 0 }
+                }}
+                transition={{ duration: 0.2 }}
+              >
+                <Link
+                  href="/contact"
+                  className="block hover:text-rose-300 transition-colors duration-200 py-2"
+                  onClick={toggleMenu}
+                >
+                  contact
+                </Link>
+              </motion.div>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </nav>
   );
 };
