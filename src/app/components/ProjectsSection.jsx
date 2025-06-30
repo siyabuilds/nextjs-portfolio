@@ -38,15 +38,15 @@ const myProjects = {
   const projects = [
     {
       id: 1,
-      title: "Task Manager",
+      title: "Carbon Footprint Tracker",
       description:
-        "A full-stack task management application built with TypeScript, PostgreSQL, and Docker. Features user authentication, real-time updates, and responsive design.",
-      tech: ["TypeScript", "React", "PostgreSQL", "Docker", "Node.js"],
+        "This is currently a frontend project that will evolve into a full-stack application. It tracks your carbon footprint using JavaScript, and will use MongoDB in the coming future.",
+      tech: ["Vite", "JavaScript", "Chart.js", "Node.js", "MongoDB"],
       status: "In Development",
       category: "Full Stack",
-      demoUrl: "#",
-      codeUrl: "https://github.com/siyabuilds/task-manager",
-      image: "/api/placeholder/400/250",
+      demoUrl: "https://carbon-footprint.siyabuilds.tech",
+      codeUrl: "https://github.com/siyabuilds/carbon-footprint-tracker",
+      image: "/carbon-footprint.png",
     },
     {
       id: 2,
@@ -65,12 +65,12 @@ const myProjects = {
       title: "Interactive Portfolio",
       description:
         "Modern, animated portfolio website showcasing my development journey. Built with Next.js, Framer Motion, and Tailwind CSS for smooth user experience.",
-      tech: ["Next.js", "Framer Motion", "Tailwind CSS", "TypeScript"],
+      tech: ["Next.js", "Framer Motion", "Tailwind CSS", "JavaScript"],
       status: "Live",
       category: "Frontend",
       demoUrl: "https://siyabuilds.tech",
       codeUrl: "https://github.com/siyabuilds/nextjs-portfolio",
-      image: "/api/placeholder/400/250",
+      image: "/nextjs-portfolio.png",
     },
   ];
 
@@ -93,14 +93,33 @@ const myProjects = {
     return () => typed.destroy();
   }, []);
 
+  const sortProjectsByStatus = (projectsToSort) => {
+    const statusPriority = {
+      Live: 1,
+      "In Development": 2,
+      Planning: 3,
+    };
+
+    return projectsToSort.sort((a, b) => {
+      const priorityA = statusPriority[a.status] || 4;
+      const priorityB = statusPriority[b.status] || 4;
+      return priorityA - priorityB;
+    });
+  };
+
   useEffect(() => {
+    let filtered;
     if (activeCategory === "All") {
-      setFilteredProjects(projects);
+      filtered = [...projects];
     } else {
-      setFilteredProjects(
-        projects.filter((project) => project.category === activeCategory)
+      filtered = projects.filter(
+        (project) => project.category === activeCategory
       );
     }
+
+    // Sort the filtered projects by status priority
+    const sorted = sortProjectsByStatus(filtered);
+    setFilteredProjects(sorted);
   }, [activeCategory]);
 
   const containerVariants = {
@@ -248,20 +267,43 @@ const myProjects = {
               variants={cardVariants}
               className="bg-white/5 rounded-lg overflow-hidden backdrop-blur-sm border border-white/10 hover:border-rose-400/50 transition-all duration-300 group"
             >
-              {/* Project Image Placeholder */}
-              <div className="h-48 bg-gradient-to-br from-rose-400/20 via-purple-400/20 to-blue-400/20 relative overflow-hidden">
-                <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
-                  <div className="text-white/60 text-center">
-                    <div className="text-4xl mb-2">🚀</div>
-                    <div className="font-mono text-xs">Preview Coming Soon</div>
-                  </div>
-                </div>
-                <motion.div
-                  className="absolute inset-0 bg-gradient-to-r from-rose-400/0 via-rose-400/20 to-rose-400/0"
-                  initial={{ x: "-100%" }}
-                  whileHover={{ x: "100%" }}
-                  transition={{ duration: 0.8 }}
-                />
+              {/* Project Image */}
+              <div className="h-48 relative overflow-hidden">
+                {project.image && !project.image.includes("placeholder") ? (
+                  <>
+                    <img
+                      src={project.image}
+                      alt={`${project.title} preview`}
+                      className="w-full h-full object-cover"
+                    />
+                    <div className="absolute inset-0 bg-black/20" />
+                    <motion.div
+                      className="absolute inset-0 bg-gradient-to-r from-rose-400/0 via-rose-400/20 to-rose-400/0"
+                      initial={{ x: "-100%" }}
+                      whileHover={{ x: "100%" }}
+                      transition={{ duration: 0.8 }}
+                    />
+                  </>
+                ) : (
+                  <>
+                    <div className="h-full bg-gradient-to-br from-rose-400/20 via-purple-400/20 to-blue-400/20 relative">
+                      <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
+                        <div className="text-white/60 text-center">
+                          <div className="text-4xl mb-2">🚀</div>
+                          <div className="font-mono text-xs">
+                            Preview Coming Soon
+                          </div>
+                        </div>
+                      </div>
+                      <motion.div
+                        className="absolute inset-0 bg-gradient-to-r from-rose-400/0 via-rose-400/20 to-rose-400/0"
+                        initial={{ x: "-100%" }}
+                        whileHover={{ x: "100%" }}
+                        transition={{ duration: 0.8 }}
+                      />
+                    </div>
+                  </>
+                )}
               </div>
 
               {/* Project Content */}
