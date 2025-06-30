@@ -1,5 +1,6 @@
 import "./index.css";
 import NavBar from "./components/Navbar";
+import { Analytics } from "@vercel/analytics/next";
 import Footer from "./components/Footer";
 import { IBM_Plex_Mono, IBM_Plex_Sans } from "next/font/google";
 
@@ -31,6 +32,7 @@ export default function RootLayout({ children }) {
       >
         <NavBar />
         <div className="mt-6">{children}</div>
+        <Analytics />
         <Footer />
       </body>
     </html>
