@@ -378,7 +378,7 @@ const contactInfo = {
                 className="mt-6"
               >
                 <a
-                  href="https://docs.google.com/document/d/1GV3Yyir_vyfhRt8LXAE9dB7Yiq6U9eAv/edit?usp=sharing&ouid=117141040635855616825&rtpof=true&sd=true"
+                  href="https://docs.google.com/document/d/1bGTtCs0ivlUtDiwmcZGg8Ax6y5WPsImt/edit?usp=sharing&ouid=117141040635855616825&rtpof=true&sd=true"
                   download
                   className="flex items-center justify-center gap-2 bg-rose-400 hover:bg-rose-500 text-black font-mono text-sm px-4 py-3 rounded-lg transition-all duration-200 shadow-lg shadow-rose-500/25"
                 >
