@@ -48,20 +48,9 @@ const myProjects = {
       codeUrl: "https://github.com/siyabuilds/carbon-footprint-tracker",
       image: "/carbon-footprint.png",
     },
+    ,
     {
       id: 2,
-      title: "Banking API System",
-      description:
-        "RESTful API for banking operations with secure authentication, transaction handling, and comprehensive error management. Built with modern Node.js practices.",
-      tech: ["Node.js", "Express", "JWT", "REST API", "PostgreSQL"],
-      status: "Planning",
-      category: "Backend",
-      demoUrl: "#",
-      codeUrl: "https://github.com/siyabuilds/banking-mock",
-      image: "/api/placeholder/400/250",
-    },
-    {
-      id: 3,
       title: "Interactive Portfolio",
       description:
         "Modern, animated portfolio website showcasing my development journey. Built with Next.js, Framer Motion, and Tailwind CSS for smooth user experience.",
@@ -71,6 +60,18 @@ const myProjects = {
       demoUrl: "https://siyabuilds.tech",
       codeUrl: "https://github.com/siyabuilds/nextjs-portfolio",
       image: "/nextjs-portfolio.png",
+    },
+    {
+      id: 3,
+      title: "Word Unscrambler",
+      description:
+        "Built with Next.js and TypeScript, this app lets you unscramble words using a custom API powered by a word list. Smooth UX and fun features.",
+      tech: ["Next.js", "TypeScript", "APIs"],
+      status: "Live",
+      category: "Backend",
+      demoUrl: "#",
+      codeUrl: "https://github.com/siyabuilds/word-unscrambler",
+      image: "/word-unscrambler.png",
     },
   ];
 
