@@ -48,7 +48,6 @@ const myProjects = {
       codeUrl: "https://github.com/siyabuilds/carbon-footprint-tracker",
       image: "/carbon-footprint.png",
     },
-    ,
     {
       id: 2,
       title: "Interactive Portfolio",
