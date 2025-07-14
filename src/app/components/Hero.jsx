@@ -104,7 +104,7 @@ const samson = {
             aria-hidden={!typingComplete}
           >
             <a
-              href="#projects"
+              href="/projects"
               className="bg-rose-300 px-5 py-2 text-black text-sm font-mono rounded-md shadow hover:bg-rose-400 transition"
               tabIndex={typingComplete ? 0 : -1}
             >
