@@ -176,7 +176,7 @@ export default function ChatPage() {
       console.error("Error:", error);
       const errorMessage = {
         id: Date.now() + 1,
-        text: "Sorry, I'm having trouble connecting right now. Please try again! 😅",
+        text: "Sorry, I&apos;m having trouble connecting right now. Please try again! 😅",
         sender: "bot",
         timestamp: new Date(),
         isTyping: false,
