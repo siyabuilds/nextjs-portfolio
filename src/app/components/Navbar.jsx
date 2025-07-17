@@ -28,6 +28,9 @@ const NavBar = () => {
           <Link href="/projects" className="hover:text-rose-300 transition">
             projects
           </Link>
+          <Link href="/chat" className="hover:text-rose-300 transition">
+            chat
+          </Link>
           <Link href="/contact" className="hover:text-rose-300 transition">
             contact
           </Link>
@@ -116,6 +119,21 @@ const NavBar = () => {
                   onClick={toggleMenu}
                 >
                   projects
+                </Link>
+              </motion.div>
+              <motion.div
+                variants={{
+                  open: { y: 0, opacity: 1 },
+                  closed: { y: -10, opacity: 0 },
+                }}
+                transition={{ duration: 0.2 }}
+              >
+                <Link
+                  href="/chat"
+                  className="block hover:text-rose-300 transition-colors duration-200 py-2"
+                  onClick={toggleMenu}
+                >
+                  chat
                 </Link>
               </motion.div>
               <motion.div
