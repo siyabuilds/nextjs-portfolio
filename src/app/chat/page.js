@@ -193,7 +193,7 @@ export default function ChatPage() {
       <div className="bg-gray-900 border-b border-gray-800 p-4 mt-6">
         <div className="max-w-4xl mx-auto flex justify-between items-center">
           <div>
-            <h1 className="text-2xl font-bold text-rose-400 font-mono">
+            <h1 className="text-2xl font-bold text-blue-400 font-mono">
               💬 Chat with Portfolio AI
             </h1>
             <p className="text-gray-400 text-sm mt-1">
@@ -203,7 +203,7 @@ export default function ChatPage() {
           </div>
           <button
             onClick={clearChat}
-            className="bg-gray-800 hover:bg-red-600 text-gray-300 hover:text-white p-2 rounded-lg transition-colors duration-200 flex items-center gap-2"
+            className="bg-gray-800 hover:bg-blue-600 text-gray-300 hover:text-white p-2 rounded-lg transition-colors duration-200 flex items-center gap-2"
             title="Clear chat history"
           >
             <TrashIcon className="h-4 w-4" />
@@ -230,7 +230,7 @@ export default function ChatPage() {
                 <div
                   className={`max-w-xs lg:max-w-md px-4 py-3 rounded-2xl ${
                     message.sender === "user"
-                      ? "bg-rose-500 text-white"
+                      ? "bg-blue-500 text-white"
                       : "bg-gray-800 text-gray-100"
                   }`}
                 >
@@ -245,7 +245,7 @@ export default function ChatPage() {
                       dangerouslySetInnerHTML={{
                         __html: message.text.replace(
                           /\*\*(.*?)\*\*/g,
-                          '<strong class="text-rose-300">$1</strong>'
+                          '<strong class="text-blue-300">$1</strong>'
                         ),
                       }}
                     />
@@ -293,13 +293,13 @@ export default function ChatPage() {
               value={inputMessage}
               onChange={(e) => setInputMessage(e.target.value)}
               placeholder="Type your message..."
-              className="flex-1 bg-gray-800 text-white px-4 py-3 rounded-full border border-gray-700 focus:outline-none focus:border-rose-400 transition-colors"
+              className="flex-1 bg-gray-800 text-white px-4 py-3 rounded-full border border-gray-700 focus:outline-none focus:border-blue-400 transition-colors"
               disabled={isLoading}
             />
             <button
               type="submit"
               disabled={isLoading || !inputMessage.trim()}
-              className="bg-rose-500 text-white p-3 rounded-full hover:bg-rose-600 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+              className="bg-blue-500 text-white p-3 rounded-full hover:bg-blue-600 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
             >
               <PaperAirplaneIcon className="h-5 w-5" />
             </button>

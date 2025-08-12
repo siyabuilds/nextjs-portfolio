@@ -123,14 +123,16 @@ export function TerminalLoader({ messages, typingSpeed = 50, onComplete }) {
       <div className="flex items-center justify-between mb-4 pb-3 border-b border-gray-700/30">
         <div className="flex items-center gap-3">
           <div className="flex gap-2">
-            <div className="h-3 w-3 rounded-full bg-red-500 shadow-lg shadow-red-500/30"></div>
-            <div className="h-3 w-3 rounded-full bg-yellow-500 shadow-lg shadow-yellow-500/30"></div>
-            <div className="h-3 w-3 rounded-full bg-green-500 shadow-lg shadow-green-500/30"></div>
+            <div className="flex space-x-1">
+              <div className="h-3 w-3 rounded-full bg-blue-500 shadow-lg shadow-blue-500/30"></div>
+              <div className="h-3 w-3 rounded-full bg-yellow-400 shadow-lg shadow-yellow-400/30"></div>
+              <div className="h-3 w-3 rounded-full bg-green-500 shadow-lg shadow-green-500/30"></div>
+            </div>
+            <span className="text-xs text-gray-400 ml-2 font-semibold tracking-wider">TERMINAL</span>
           </div>
-          <span className="text-xs text-gray-400 ml-2 font-semibold tracking-wider">TERMINAL</span>
         </div>
         <div className="flex items-center gap-2">
-          <div className="h-2 w-2 rounded-full bg-rose-500 animate-pulse shadow-lg shadow-rose-500/30"></div>
+          <div className="h-2 w-2 rounded-full bg-blue-500 animate-pulse shadow-lg shadow-blue-500/30"></div>
           <span className="text-xs text-gray-500">ACTIVE</span>
         </div>
       </div>
@@ -146,7 +148,7 @@ export function TerminalLoader({ messages, typingSpeed = 50, onComplete }) {
             transition={{ duration: 0.3 }}
             className="flex items-start gap-2"
           >
-            <span className="text-rose-500 font-bold">❯</span>
+            <span className="text-blue-500 font-bold">❯</span>
             <span className="text-green-300 leading-relaxed">{message}</span>
           </motion.div>
         ))}
@@ -159,14 +161,14 @@ export function TerminalLoader({ messages, typingSpeed = 50, onComplete }) {
             transition={{ duration: 0.3 }}
             className="flex items-start gap-2"
           >
-            <span className="text-rose-500 font-bold">❯</span>
+            <span className="text-blue-500 font-bold">❯</span>
             <div className="flex items-center">
               <span className="text-green-300 leading-relaxed">{displayedText}</span>
               {showCursor && (
                 <motion.span
                   animate={{ opacity: [1, 0] }}
                   transition={{ duration: 0.5, repeat: Infinity, repeatType: "reverse" }}
-                  className="ml-0.5 w-2 h-5 bg-rose-500 inline-block shadow-lg shadow-rose-500/50"
+                  className="ml-0.5 w-2 h-5 bg-blue-500 inline-block shadow-lg shadow-blue-500/50"
                 />
               )}
             </div>
@@ -184,17 +186,17 @@ export function TerminalLoader({ messages, typingSpeed = 50, onComplete }) {
               <motion.div
                 animate={{ opacity: [0.3, 1] }}
                 transition={{ duration: 0.6, repeat: Infinity, repeatType: "reverse", delay: 0 }}
-                className="w-1 h-1 bg-rose-500 rounded-full"
+                className="w-1 h-1 bg-blue-500 rounded-full"
               />
               <motion.div
                 animate={{ opacity: [0.3, 1] }}
                 transition={{ duration: 0.6, repeat: Infinity, repeatType: "reverse", delay: 0.2 }}
-                className="w-1 h-1 bg-rose-500 rounded-full"
+                className="w-1 h-1 bg-blue-500 rounded-full"
               />
               <motion.div
                 animate={{ opacity: [0.3, 1] }}
                 transition={{ duration: 0.6, repeat: Infinity, repeatType: "reverse", delay: 0.4 }}
-                className="w-1 h-1 bg-rose-500 rounded-full"
+                className="w-1 h-1 bg-blue-500 rounded-full"
               />
             </div>
             <span className="text-xs">Process complete</span>
@@ -204,7 +206,7 @@ export function TerminalLoader({ messages, typingSpeed = 50, onComplete }) {
       
       {/* Bottom accent line */}
       <div className="mt-4 pt-3 border-t border-gray-700/30">
-        <div className="h-0.5 bg-gradient-to-r from-transparent via-rose-500 to-transparent opacity-60"></div>
+        <div className="h-0.5 bg-gradient-to-r from-transparent via-blue-500 to-transparent opacity-60"></div>
       </div>
     </motion.div>
   );

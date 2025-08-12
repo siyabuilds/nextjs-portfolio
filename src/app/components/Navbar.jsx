@@ -15,23 +15,23 @@ const NavBar = () => {
         {/* Logo/Brand */}
         <Link
           href="/"
-          className="text-2xl font-bold tracking-wide text-rose-400"
+          className="text-2xl font-bold tracking-wide text-blue-400"
         >
           siyabuilds.tech
         </Link>
 
         {/* Desktop Links */}
         <div className="hidden md:flex gap-8 font-mono text-sm">
-          <Link href="/about" className="hover:text-rose-300 transition">
+          <Link href="/about" className="hover:text-blue-300 transition">
             about
           </Link>
-          <Link href="/projects" className="hover:text-rose-300 transition">
+          <Link href="/projects" className="hover:text-blue-300 transition">
             projects
           </Link>
-          <Link href="/chat" className="hover:text-rose-300 transition">
+          <Link href="/chat" className="hover:text-blue-300 transition">
             chat
           </Link>
-          <Link href="/contact" className="hover:text-rose-300 transition">
+          <Link href="/contact" className="hover:text-blue-300 transition">
             contact
           </Link>
         </div>
@@ -100,7 +100,7 @@ const NavBar = () => {
               >
                 <Link
                   href="/about"
-                  className="block hover:text-rose-300 transition-colors duration-200 py-2"
+                  className="block hover:text-blue-300 transition-colors duration-200 py-2"
                   onClick={toggleMenu}
                 >
                   about
@@ -115,7 +115,7 @@ const NavBar = () => {
               >
                 <Link
                   href="/projects"
-                  className="block hover:text-rose-300 transition-colors duration-200 py-2"
+                  className="block hover:text-blue-300 transition-colors duration-200 py-2"
                   onClick={toggleMenu}
                 >
                   projects
@@ -130,7 +130,7 @@ const NavBar = () => {
               >
                 <Link
                   href="/chat"
-                  className="block hover:text-rose-300 transition-colors duration-200 py-2"
+                  className="block hover:text-blue-300 transition-colors duration-200 py-2"
                   onClick={toggleMenu}
                 >
                   chat
@@ -145,7 +145,7 @@ const NavBar = () => {
               >
                 <Link
                   href="/contact"
-                  className="block hover:text-rose-300 transition-colors duration-200 py-2"
+                  className="block hover:text-blue-300 transition-colors duration-200 py-2"
                   onClick={toggleMenu}
                 >
                   contact

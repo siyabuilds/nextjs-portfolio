@@ -96,7 +96,7 @@ export const CodeBlock = ({ codeString, language, title }) => {
       {/* Enhanced header with glassmorphism effect */}
       <div className="bg-black/50 backdrop-blur-sm flex items-center justify-between h-10 px-4 select-none border-b border-zinc-800">
         <div className="flex items-center space-x-2">
-          <div className="w-3 h-3 bg-red-500 rounded-full ring-1 ring-red-900 ring-inset"></div>
+          <div className="w-3 h-3 bg-blue-500 rounded-full ring-1 ring-blue-900 ring-inset"></div>
           <div className="w-3 h-3 bg-yellow-500 rounded-full ring-1 ring-yellow-900 ring-inset"></div>
           <div className="w-3 h-3 bg-green-500 rounded-full ring-1 ring-green-900 ring-inset"></div>
         </div>
@@ -115,7 +115,7 @@ export const CodeBlock = ({ codeString, language, title }) => {
             aria-label="Copy code"
             className={`
               text-xs font-mono px-2 py-1 rounded-md 
-              transition-all duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-rose-400
+              transition-all duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-blue-400
               ${
                 buttonText === "Copied!"
                   ? "bg-green-600/20 text-green-400 border border-green-600/40"
@@ -168,7 +168,7 @@ export const CodeBlock = ({ codeString, language, title }) => {
           <div className="relative">
             {/* Add subtle gradient effect when hovering */}
             {isHovering && (
-              <div className="absolute inset-0 bg-gradient-to-b from-rose-500/5 to-transparent pointer-events-none" />
+              <div className="absolute inset-0 bg-gradient-to-b from-blue-500/5 to-transparent pointer-events-none" />
             )}
 
             <pre

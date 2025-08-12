@@ -7,22 +7,22 @@ const Footer = () => (
         <div className="flex items-center flex-shrink-0">
           <span className="text-white/70 text-xs font-medium whitespace-nowrap">
             &copy; {new Date().getFullYear()}{" "}
-            <span className="font-mono text-rose-300">siyabuilds.tech</span>
+            <span className="font-mono text-blue-300">siyabuilds.tech</span>
           </span>
         </div>
         <div className="flex items-center space-x-2 flex-shrink-0">
-          <div className="h-[1px] w-4 bg-gradient-to-r from-transparent to-rose-500/50"></div>
+          <div className="h-[1px] w-4 bg-gradient-to-r from-transparent to-blue-500/50"></div>
           <div className="text-xs text-white/30 font-mono whitespace-nowrap">
             // end
           </div>
-          <div className="h-[1px] w-4 bg-gradient-to-l from-transparent to-rose-500/50"></div>
+          <div className="h-[1px] w-4 bg-gradient-to-l from-transparent to-blue-500/50"></div>
         </div>
         <div className="flex items-center gap-2 flex-shrink-0">
           <a
             href="https://github.com/siyabuilds"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-white/60 hover:text-rose-300 transition-colors"
+            className="text-white/60 hover:text-blue-300 transition-colors"
             aria-label="GitHub Profile"
           >
             <svg
@@ -42,7 +42,7 @@ const Footer = () => (
             className="text-white/60 hover:text-white group transition-all flex items-center"
           >
             <span className="text-xs font-mono mr-0.5">@</span>
-            <span className="text-xs font-mono group-hover:text-rose-300 transition-colors whitespace-nowrap">
+            <span className="text-xs font-mono group-hover:text-blue-300 transition-colors whitespace-nowrap">
               siyabuilds
             </span>
           </a>
