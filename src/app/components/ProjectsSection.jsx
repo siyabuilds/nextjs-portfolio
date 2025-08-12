@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 import Typed from "typed.js";
 import CodeBlock from "./CodeBlock";
+import GitHubRepos from "./GitHubRepos";
 
 const ProjectsSection = () => {
   const typedRef = useRef(null);
@@ -391,7 +392,7 @@ const myProjects = {
           ))}
         </motion.div>
 
-        {/* Coming Soon Section */}
+        {/* GitHub Repositories Section */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{
@@ -399,52 +400,9 @@ const myProjects = {
             y: typingComplete ? 0 : 20,
           }}
           transition={{ duration: 0.8, delay: 1.4 }}
-          className="text-center space-y-6 bg-white/5 rounded-lg p-8 backdrop-blur-sm border border-white/10"
           aria-hidden={!typingComplete}
         >
-          <div className="space-y-4">
-            <motion.div
-              animate={{
-                rotate: [0, 10, -10, 0],
-                scale: [1, 1.1, 1],
-              }}
-              transition={{
-                duration: 2,
-                repeat: Infinity,
-                repeatDelay: 3,
-              }}
-              className="text-6xl"
-            >
-              🔨
-            </motion.div>
-            <h2 className="text-2xl font-bold">
-              More Projects <span className="text-blue-400">Coming Soon</span>
-            </h2>
-            <p className="text-white/60 max-w-2xl mx-auto">
-              I'm constantly learning and building new projects. Follow my
-              journey as I explore new technologies, tackle interesting
-              challenges, and contribute to the developer community.
-            </p>
-          </div>
-
-          <div className="flex items-center justify-center gap-4">
-            <a
-              href="/contact"
-              className="bg-blue-300 px-6 py-3 text-black text-sm font-mono rounded-md shadow hover:bg-blue-400 transition"
-              tabIndex={typingComplete ? 0 : -1}
-            >
-              collaborate with me
-            </a>
-            <a
-              href="https://github.com/siyabuilds"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-white/70 hover:underline text-sm font-mono"
-              tabIndex={typingComplete ? 0 : -1}
-            >
-              follow on github
-            </a>
-          </div>
+          <GitHubRepos />
         </motion.div>
       </div>
     </section>
