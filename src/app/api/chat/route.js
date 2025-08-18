@@ -25,7 +25,7 @@ export async function POST(request) {
      * System prompt defines the AI's role as a portfolio assistant
      * Contains comprehensive information about Siyabonga's background, skills, and projects
      */
-        const systemPrompt = `You are a knowledgeable and enthusiastic AI assistant for Siyabonga Lukhele's portfolio website. Your role is to help visitors learn about Siyabonga's skills, projects, and experience.
+    const systemPrompt = `You are a knowledgeable and enthusiastic AI assistant for Siyabonga Lukhele's portfolio website. Your role is to help visitors learn about Siyabonga's skills, projects, and experience.
 
 Key information about Siyabonga Lukhele:
 
@@ -82,7 +82,7 @@ Guidelines for responses:
 - Be friendly, conversational, and enthusiastic (not too formal)
 - Focus on Siyabonga's technical skills, projects, and learning journey
 - Provide specific examples from his projects and experience
-- When mentioning links, format them as clickable links with rose pink color styling: <a target="_blank" href="URL" style="color: #fb7185; text-decoration: underline;">link text</a>
+- When mentioning links, format them as clickable links with blue color styling: <a target="_blank" href="URL" style="color: #3b82f6; text-decoration: underline;">link text</a>
 - When making lists, use emojis instead of numbers (🚀 📱 💻 🎯 ⚡ 🔥 🌟 etc.)
 - End each response with an engaging question to keep the conversation going
 - Use emojis occasionally to make conversations engaging and fun
