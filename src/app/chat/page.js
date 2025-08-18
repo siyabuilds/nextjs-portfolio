@@ -49,11 +49,11 @@ export default function ChatPage() {
 
   const initializeDefaultMessage = () => {
     const introMessages = [
-      "Hey! I&apos;m your portfolio AI assistant. Ask me anything about Samson&apos;s work, skills, or projects! 🚀",
-      "Welcome! Curious about Samson&apos;s experience or projects? I&apos;m here to help. 🤖",
-      "Hello! Want to know more about Samson&apos;s skills or portfolio? Just ask! 💡",
-      "Hi there! Samson&apos;s portfolio AI at your service. What would you like to know? 📝",
-      "Greetings! Ask me anything about Samson&apos;s journey, skills, or achievements! 🌟",
+      "Hey! I&apos;m your portfolio AI assistant. Ask me anything about Siyabonga&apos;s work, skills, or projects! 🚀",
+      "Welcome! Curious about Siyabonga&apos;s experience or projects? I&apos;m here to help. 🤖",
+      "Hello! Want to know more about Siyabonga&apos;s skills or portfolio? Just ask! 💡",
+      "Hi there! Siyabonga&apos;s portfolio AI at your service. What would you like to know? 📝",
+      "Greetings! Ask me anything about Siyabonga&apos;s journey, skills, or achievements! 🌟",
     ];
     const randomIndex = Math.floor(Math.random() * introMessages.length);
     const defaultMessage = {
@@ -197,7 +197,7 @@ export default function ChatPage() {
               💬 Chat with Portfolio AI
             </h1>
             <p className="text-gray-400 text-sm mt-1">
-              Ask me about Samson&apos;s projects, skills, or experience! •{" "}
+              Ask me about Siyabonga&apos;s projects, skills, or experience! •{" "}
               {messages.length} messages
             </p>
           </div>

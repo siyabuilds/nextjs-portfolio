@@ -9,8 +9,8 @@ const HeroSection = () => {
   const [typingComplete, setTypingComplete] = useState(false);
 
   const portfolioCodeString = `
-const samson = {
-  name: "Samson Lukhele",
+const siyabonga = {
+  name: "Siyabonga Lukhele",
   aliases: ["Spha", "siyabuilds"],
   role: "Full Stack Web Developer",
   mission: "Crafting accessible and intelligent digital experiences.",
@@ -91,7 +91,7 @@ const samson = {
             <CodeBlock
               codeString={portfolioCodeString}
               language="javascript"
-              title="samson.ts"
+              title="siyabonga.ts"
             />
           </motion.div>
 
@@ -131,7 +131,7 @@ const samson = {
           <CodeBlock
             codeString={portfolioCodeString}
             language="javascript"
-            title="samson.ts"
+            title="siyabonga.ts"
           />
         </motion.div>
       </div>

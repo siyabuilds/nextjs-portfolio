@@ -9,7 +9,7 @@ const AboutSection = () => {
   const [typingComplete, setTypingComplete] = useState(false);
 
   const aboutCodeString = `
-const aboutSamson = {
+const aboutSiyabonga = {
   background: {
     education: "Matric 2021 — Self-taught dev",
     status: "Web Dev Student @ Umuzi",
@@ -99,7 +99,7 @@ const aboutSamson = {
               className="text-white/60 max-w-lg text-lg"
               aria-hidden={!typingComplete}
             >
-              I'm Samson Lukhele, an aspiring Full Stack Developer currently
+              I'm Siyabonga Lukhele, an aspiring Full Stack Developer currently
               advancing my skills at Umuzi Experience Labs. I'm passionate about
               building clean, functional web experiences and solving problems
               through code.

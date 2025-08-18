@@ -1,7 +1,7 @@
 import ProjectsSection from "../components/ProjectsSection";
 
 export const metadata = {
-  title: "Projects - Samson Lukhele",
+  title: "Projects - Siyabonga Lukhele",
   description:
     "Explore my portfolio of web development projects showcasing React, Next.js, and modern web technologies.",
 };

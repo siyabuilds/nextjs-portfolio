@@ -19,9 +19,9 @@ const ibmPlexSans = IBM_Plex_Sans({
 });
 
 export const metadata = {
-  title: "Samson Lukhele - Full Stack Developer",
+  title: "Siyabonga Lukhele - Full Stack Developer",
   description:
-    "Portfolio of Samson Lukhele, a Full Stack Web Developer specializing in React, Next.js, and modern web technologies.",
+    "Portfolio of Siyabonga Lukhele, a Full Stack Web Developer specializing in React, Next.js, and modern web technologies.",
   icons: {
     icon: "/favicon.png",
   },
