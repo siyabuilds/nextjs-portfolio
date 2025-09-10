@@ -45,7 +45,7 @@ const myProjects = {
       tech: ["Vite", "JavaScript", "Chart.js"],
       status: "In Development",
       category: "Frontend",
-      demoUrl: "https://carbon-footprint.siyabuilds.tech",
+      demoUrl: "https://carbontrackr.vercel.app",
       codeUrl: "https://github.com/siyabuilds/carbontrackr_frontend",
       image: "/carbon-footprint.png",
     },
