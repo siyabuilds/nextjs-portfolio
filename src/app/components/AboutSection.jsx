@@ -39,15 +39,20 @@ const aboutSiyabonga = {
   const skills = [
     {
       category: "Frontend",
-      techs: ["HTML/CSS/JS", "React", "Next.js", "Tailwind CSS"],
+      techs: ["Vite", "Next.js", "Tailwind CSS", "Framer Motion"],
     },
     {
       category: "Backend",
-      techs: ["Node.js", "Express", "REST APIs", "PostgreSQL"],
+      techs: ["Node.js", "Express", "REST APIs", "MongoDB"],
     },
     {
       category: "Currently Learning",
-      techs: ["Full Stack Dev", "API Design", "Database Design", "DevOps"],
+      techs: [
+        "Full Stack Dev",
+        "API Design",
+        "DevOps",
+        "Serverless Architectures",
+      ],
     },
     {
       category: "Tools & Build",
