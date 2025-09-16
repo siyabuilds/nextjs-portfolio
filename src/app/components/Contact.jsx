@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import Typed from "typed.js";
 import { TerminalLoader } from "../components/TerminalLoader";
 import CodeBlock from "../components/CodeBlock";
+import { FiMail } from "react-icons/fi";
 
 export default function ContactPage() {
   const typedRef = useRef(null);
@@ -51,7 +52,7 @@ const contactInfo = {
   useEffect(() => {
     const typed = new Typed(typedRef.current, {
       strings: [
-        "Let&apos;s build something <span class='text-blue-400'>amazing</span> together<span class='text-white'>.</span>",
+        "Let&apos;s build something <span class='text-emerald-500'>amazing</span> together<span class='text-white'>.</span>",
       ],
       typeSpeed: 50,
       startDelay: 500,
@@ -219,27 +220,20 @@ const contactInfo = {
           <div className="lg:col-span-1 space-y-8">
             <div>
               <h2 className="text-2xl font-bold mb-6">
-                Get In <span className="text-blue-400">Touch</span>
+                Get In <span className="text-emerald-500">Touch</span>
               </h2>
               <div className="space-y-6">
                 <div className="bg-white/5 rounded-lg p-4 backdrop-blur-sm border border-white/10">
                   <div className="flex items-center gap-3 mb-2">
-                    <div className="w-8 h-8 bg-blue-500/20 rounded-full flex items-center justify-center">
-                      <svg
-                        className="w-4 h-4 text-blue-400"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={2}
-                          d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-                        />
-                      </svg>
+                    <div className="w-8 h-8 bg-emerald-500/20 rounded-full flex items-center justify-center">
+                      <FiMail
+                        className="w-4 h-4 text-emerald-500"
+                        aria-hidden="true"
+                      />
                     </div>
-                    <h3 className="font-mono text-blue-400 text-sm">Email</h3>
+                    <h3 className="font-mono text-emerald-500 text-sm">
+                      Email
+                    </h3>
                   </div>
                   <p className="text-white/80 text-sm">
                     siyabonga.lukhele@umuzi.org
@@ -248,9 +242,9 @@ const contactInfo = {
 
                 <div className="bg-white/5 rounded-lg p-4 backdrop-blur-sm border border-white/10">
                   <div className="flex items-center gap-3 mb-2">
-                    <div className="w-8 h-8 bg-blue-500/20 rounded-full flex items-center justify-center">
+                    <div className="w-8 h-8 bg-emerald-500/20 rounded-full flex items-center justify-center">
                       <svg
-                        className="w-4 h-4 text-blue-400"
+                        className="w-4 h-4 text-emerald-500"
                         fill="none"
                         stroke="currentColor"
                         viewBox="0 0 24 24"
@@ -269,7 +263,7 @@ const contactInfo = {
                         />
                       </svg>
                     </div>
-                    <h3 className="font-mono text-blue-400 text-sm">
+                    <h3 className="font-mono text-emerald-500 text-sm">
                       Location
                     </h3>
                   </div>
@@ -280,9 +274,9 @@ const contactInfo = {
 
                 <div className="bg-white/5 rounded-lg p-4 backdrop-blur-sm border border-white/10">
                   <div className="flex items-center gap-3 mb-2">
-                    <div className="w-8 h-8 bg-blue-500/20 rounded-full flex items-center justify-center">
+                    <div className="w-8 h-8 bg-emerald-500/20 rounded-full flex items-center justify-center">
                       <svg
-                        className="w-4 h-4 text-blue-400"
+                        className="w-4 h-4 text-emerald-500"
                         fill="none"
                         stroke="currentColor"
                         viewBox="0 0 24 24"
@@ -295,7 +289,7 @@ const contactInfo = {
                         />
                       </svg>
                     </div>
-                    <h3 className="font-mono text-blue-400 text-sm">
+                    <h3 className="font-mono text-emerald-500 text-sm">
                       Response Time
                     </h3>
                   </div>
@@ -307,7 +301,7 @@ const contactInfo = {
             {/* Social Links */}
             <div>
               <h3 className="text-lg font-bold mb-4">
-                Connect <span className="text-blue-400">Online</span>
+                Connect <span className="text-emerald-500">Online</span>
               </h3>
               <div className="space-y-3">
                 <a
@@ -317,7 +311,7 @@ const contactInfo = {
                   className="flex items-center gap-3 bg-white/5 hover:bg-white/10 rounded-lg p-3 border border-white/10 transition-all duration-200"
                 >
                   <svg
-                    className="w-5 h-5 text-blue-400"
+                    className="w-5 h-5 text-emerald-500"
                     fill="currentColor"
                     viewBox="0 0 24 24"
                   >
@@ -336,7 +330,7 @@ const contactInfo = {
                   className="flex items-center gap-3 bg-white/5 hover:bg-white/10 rounded-lg p-3 border border-white/10 transition-all duration-200"
                 >
                   <svg
-                    className="w-5 h-5 text-blue-400"
+                    className="w-5 h-5 text-emerald-500"
                     fill="currentColor"
                     viewBox="0 0 24 24"
                   >
@@ -355,7 +349,7 @@ const contactInfo = {
                   className="flex items-center gap-3 bg-white/5 hover:bg-white/10 rounded-lg p-3 border border-white/10 transition-all duration-200"
                 >
                   <svg
-                    className="w-5 h-5 text-blue-400"
+                    className="w-5 h-5 text-emerald-500"
                     fill="currentColor"
                     viewBox="0 0 24 24"
                   >
@@ -380,7 +374,7 @@ const contactInfo = {
                 <a
                   href="https://docs.google.com/document/d/1bGTtCs0ivlUtDiwmcZGg8Ax6y5WPsImt/edit?usp=sharing&ouid=117141040635855616825&rtpof=true&sd=true"
                   download
-                  className="flex items-center justify-center gap-2 bg-blue-400 hover:bg-blue-500 text-black font-mono text-sm px-4 py-3 rounded-lg transition-all duration-200 shadow-lg shadow-blue-500/25"
+                  className="flex items-center justify-center gap-2 bg-emerald-500 hover:bg-emerald-600 text-black font-mono text-sm px-4 py-3 rounded-lg transition-all duration-200 shadow-lg shadow-emerald-500/25"
                 >
                   <svg
                     className="w-4 h-4"
@@ -405,7 +399,7 @@ const contactInfo = {
           <div className="lg:col-span-2">
             <div className="bg-white/5 rounded-lg p-8 backdrop-blur-sm border border-white/10">
               <h2 className="text-xl font-bold mb-6">
-                Send a <span className="text-blue-400">Message</span>
+                Send a <span className="text-emerald-500">Message</span>
               </h2>
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -423,7 +417,7 @@ const contactInfo = {
                       value={formData.name}
                       onChange={handleInputChange}
                       required
-                      className="w-full px-4 py-3 bg-white/5 border border-white/20 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 text-white placeholder-white/40"
+                      className="w-full px-4 py-3 bg-white/5 border border-white/20 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-all duration-200 text-white placeholder-white/40"
                       placeholder="Your name"
                     />
                   </div>
@@ -441,7 +435,7 @@ const contactInfo = {
                       value={formData.email}
                       onChange={handleInputChange}
                       required
-                      className="w-full px-4 py-3 bg-white/5 border border-white/20 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 text-white placeholder-white/40"
+                      className="w-full px-4 py-3 bg-white/5 border border-white/20 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-all duration-200 text-white placeholder-white/40"
                       placeholder="your.email@example.com"
                     />
                   </div>
@@ -461,7 +455,7 @@ const contactInfo = {
                     value={formData.subject}
                     onChange={handleInputChange}
                     required
-                    className="w-full px-4 py-3 bg-white/5 border border-white/20 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 text-white placeholder-white/40"
+                    className="w-full px-4 py-3 bg-white/5 border border-white/20 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-all duration-200 text-white placeholder-white/40"
                     placeholder="What's this about?"
                   />
                 </div>
@@ -480,7 +474,7 @@ const contactInfo = {
                     onChange={handleInputChange}
                     required
                     rows={6}
-                    className="w-full px-4 py-3 bg-white/5 border border-white/20 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 text-white placeholder-white/40 resize-none"
+                    className="w-full px-4 py-3 bg-white/5 border border-white/20 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-all duration-200 text-white placeholder-white/40 resize-none"
                     placeholder="Tell me about your project or just say hello..."
                   />
                 </div>
@@ -490,7 +484,7 @@ const contactInfo = {
                   disabled={isSubmitting}
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
-                  className="w-full bg-blue-400 hover:bg-blue-500 text-black font-mono text-sm py-4 px-8 rounded-lg transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed shadow-lg shadow-blue-500/25"
+                  className="w-full bg-emerald-500 hover:bg-emerald-600 text-black font-mono text-sm py-4 px-8 rounded-lg transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed shadow-lg shadow-emerald-500/25"
                 >
                   {isSubmitting ? "Sending..." : "Send Message"}
                 </motion.button>
@@ -511,7 +505,7 @@ const contactInfo = {
           aria-hidden={!typingComplete}
         >
           <h2 className="text-2xl font-bold">
-            Ready to <span className="text-blue-400">Collaborate</span>?
+            Ready to <span className="text-emerald-500">Collaborate</span>?
           </h2>
           <p className="text-white/60 max-w-2xl mx-auto">
             Whether you have a project idea, need a development partner, or just
@@ -521,7 +515,7 @@ const contactInfo = {
           <div className="flex items-center justify-center gap-4">
             <a
               href="mailto:siyabonga.lukhele@umuzi.org"
-              className="bg-blue-300 px-6 py-3 text-black text-sm font-mono rounded-md shadow hover:bg-blue-400 transition"
+              className="bg-slate-400 px-6 py-3 text-black text-sm font-mono rounded-md shadow hover:bg-emerald-500 transition"
               tabIndex={typingComplete ? 0 : -1}
             >
               email me directly

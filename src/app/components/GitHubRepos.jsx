@@ -1,7 +1,13 @@
 "use client";
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
-import { FiStar, FiGitBranch, FiExternalLink, FiGithub, FiLoader } from "react-icons/fi";
+import {
+  FiStar,
+  FiGitBranch,
+  FiExternalLink,
+  FiGithub,
+  FiLoader,
+} from "react-icons/fi";
 
 const GitHubRepos = () => {
   const [repos, setRepos] = useState([]);
@@ -12,16 +18,16 @@ const GitHubRepos = () => {
     const fetchRepos = async () => {
       try {
         setLoading(true);
-        const response = await fetch('/api/github-repos');
-        
+        const response = await fetch("/api/github-repos");
+
         if (!response.ok) {
-          throw new Error('Failed to fetch repositories');
+          throw new Error("Failed to fetch repositories");
         }
-        
+
         const data = await response.json();
         setRepos(data.repos || []);
       } catch (err) {
-        console.error('Error fetching repos:', err);
+        console.error("Error fetching repos:", err);
         setError(err.message);
       } finally {
         setLoading(false);
@@ -61,7 +67,7 @@ const GitHubRepos = () => {
   const getLanguageColor = (language) => {
     const colors = {
       JavaScript: "bg-yellow-400",
-      TypeScript: "bg-blue-400",
+      TypeScript: "bg-emerald-500",
       Python: "bg-green-400",
       HTML: "bg-orange-400",
       CSS: "bg-purple-400",
@@ -75,7 +81,7 @@ const GitHubRepos = () => {
     return (
       <div className="text-center space-y-6 bg-white/5 rounded-lg p-8 backdrop-blur-sm border border-white/10">
         <div className="flex items-center justify-center space-x-2">
-          <FiLoader className="animate-spin text-blue-400 text-2xl" />
+          <FiLoader className="animate-spin text-emerald-500 text-2xl" />
           <span className="text-white/70">Loading GitHub repositories...</span>
         </div>
       </div>
@@ -106,11 +112,12 @@ const GitHubRepos = () => {
           <FiGithub className="text-6xl text-white mx-auto" />
         </motion.div>
         <h2 className="text-2xl font-bold">
-          Featured <span className="text-blue-400">Repositories</span>
+          Featured <span className="text-emerald-500">Repositories</span>
         </h2>
         <p className="text-white/60 max-w-2xl mx-auto">
-          Explore my latest projects and contributions on GitHub. Each repository
-          represents a journey of learning, building, and sharing knowledge.
+          Explore my latest projects and contributions on GitHub. Each
+          repository represents a journey of learning, building, and sharing
+          knowledge.
         </p>
       </div>
 
@@ -125,12 +132,12 @@ const GitHubRepos = () => {
           <motion.div
             key={repo.id}
             variants={cardVariants}
-            className="bg-white/5 rounded-lg p-6 backdrop-blur-sm border border-white/10 hover:border-blue-400/50 transition-all duration-300 group"
+            className="bg-white/5 rounded-lg p-6 backdrop-blur-sm border border-white/10 hover:border-emerald-500/50 transition-all duration-300 group"
           >
             {/* Repo Header */}
             <div className="flex items-start justify-between mb-4">
               <div className="flex-1">
-                <h3 className="text-lg font-bold text-white group-hover:text-blue-400 transition-colors">
+                <h3 className="text-lg font-bold text-white group-hover:text-emerald-500 transition-colors">
                   {repo.name}
                 </h3>
                 <p className="text-white/60 text-sm mt-1 line-clamp-2">
@@ -145,7 +152,7 @@ const GitHubRepos = () => {
                 <FiStar className="text-xs" />
                 <span>{repo.stars}</span>
               </div>
-              <div className="flex items-center space-x-1 text-blue-400">
+              <div className="flex items-center space-x-1 text-emerald-500">
                 <FiGitBranch className="text-xs" />
                 <span>{repo.forks}</span>
               </div>
@@ -168,7 +175,7 @@ const GitHubRepos = () => {
                   {repo.topics.slice(0, 3).map((topic) => (
                     <span
                       key={topic}
-                      className="bg-blue-400/10 text-blue-400 px-2 py-1 rounded text-xs font-mono"
+                      className="bg-emerald-500/10 text-emerald-500 px-2 py-1 rounded text-xs font-mono"
                     >
                       {topic}
                     </span>
@@ -193,13 +200,13 @@ const GitHubRepos = () => {
                 <FiGithub className="text-sm" />
                 <span>Code</span>
               </a>
-              
+
               {repo.homepage && (
                 <a
                   href={repo.homepage}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex-1 flex items-center justify-center space-x-1 py-2 px-4 bg-blue-400/10 text-blue-400 hover:bg-blue-400 hover:text-black rounded font-mono text-xs transition-all duration-300"
+                  className="flex-1 flex items-center justify-center space-x-1 py-2 px-4 bg-emerald-500/10 text-emerald-500 hover:bg-emerald-500 hover:text-black rounded font-mono text-xs transition-all duration-300"
                 >
                   <FiExternalLink className="text-sm" />
                   <span>Live</span>
@@ -223,7 +230,7 @@ const GitHubRepos = () => {
           href="https://github.com/siyabuilds"
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center space-x-2 bg-blue-400 text-black px-6 py-3 rounded font-mono text-sm hover:bg-blue-300 transition-colors"
+          className="inline-flex items-center space-x-2 bg-emerald-500 text-black px-6 py-3 rounded font-mono text-sm hover:bg-slate-400 transition-colors"
         >
           <FiGithub />
           <span>View All Repositories</span>

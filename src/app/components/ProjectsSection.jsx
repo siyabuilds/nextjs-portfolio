@@ -82,7 +82,7 @@ const myProjects = {
   useEffect(() => {
     const typed = new Typed(typedRef.current, {
       strings: [
-        "Building tomorrow's solutions with <span class='text-blue-400'>code</span> and <span class='text-blue-400'>creativity</span><span class='text-white'>.</span>",
+        "Building tomorrow's solutions with <span class='text-emerald-500'>code</span> and <span class='text-emerald-500'>creativity</span><span class='text-white'>.</span>",
       ],
       typeSpeed: 50,
       startDelay: 500,
@@ -157,7 +157,7 @@ const myProjects = {
       case "In Development":
         return "text-yellow-400 bg-yellow-400/10";
       case "Planning":
-        return "text-blue-400 bg-blue-400/10";
+        return "text-emerald-500 bg-emerald-500/10";
       default:
         return "text-gray-400 bg-gray-400/10";
     }
@@ -246,7 +246,7 @@ const myProjects = {
               onClick={() => setActiveCategory(category)}
               className={`px-6 py-2 rounded-full font-mono text-sm transition-all duration-300 ${
                 activeCategory === category
-                  ? "bg-blue-400 text-black"
+                  ? "bg-emerald-500 text-black"
                   : "bg-white/5 text-white/70 hover:bg-white/10 hover:text-white"
               }`}
             >
@@ -266,7 +266,7 @@ const myProjects = {
             <motion.div
               key={project.id}
               variants={cardVariants}
-              className="bg-white/5 rounded-lg overflow-hidden backdrop-blur-sm border border-white/10 hover:border-blue-400/50 transition-all duration-300 group"
+              className="bg-white/5 rounded-lg overflow-hidden backdrop-blur-sm border border-white/10 hover:border-emerald-500/50 transition-all duration-300 group"
             >
               {/* Project Image */}
               <div className="h-48 relative overflow-hidden">
@@ -279,7 +279,7 @@ const myProjects = {
                     />
                     <div className="absolute inset-0 bg-black/20" />
                     <motion.div
-                      className="absolute inset-0 bg-gradient-to-r from-blue-400/0 via-blue-400/20 to-blue-400/0"
+                      className="absolute inset-0 bg-gradient-to-r from-emerald-500/0 via-emerald-500/20 to-emerald-500/0"
                       initial={{ x: "-100%" }}
                       whileHover={{ x: "100%" }}
                       transition={{ duration: 0.8 }}
@@ -287,7 +287,7 @@ const myProjects = {
                   </>
                 ) : (
                   <>
-                    <div className="h-full bg-gradient-to-br from-blue-400/20 via-purple-400/20 to-blue-400/20 relative">
+                    <div className="h-full bg-gradient-to-br from-emerald-500/20 via-purple-400/20 to-emerald-500/20 relative">
                       <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
                         <div className="text-white/60 text-center">
                           <div className="text-4xl mb-2">🚀</div>
@@ -297,7 +297,7 @@ const myProjects = {
                         </div>
                       </div>
                       <motion.div
-                        className="absolute inset-0 bg-gradient-to-r from-blue-400/0 via-blue-400/20 to-blue-400/0"
+                        className="absolute inset-0 bg-gradient-to-r from-emerald-500/0 via-emerald-500/20 to-emerald-500/0"
                         initial={{ x: "-100%" }}
                         whileHover={{ x: "100%" }}
                         transition={{ duration: 0.8 }}
@@ -318,14 +318,14 @@ const myProjects = {
                   >
                     {project.status}
                   </span>
-                  <span className="text-blue-400 font-mono text-xs">
+                  <span className="text-emerald-500 font-mono text-xs">
                     {project.category}
                   </span>
                 </div>
 
                 {/* Title & Description */}
                 <div>
-                  <h3 className="text-xl font-bold mb-2 group-hover:text-blue-400 transition-colors">
+                  <h3 className="text-xl font-bold mb-2 group-hover:text-emerald-500 transition-colors">
                     {project.title}
                   </h3>
                   <p className="text-white/60 text-sm leading-relaxed">
@@ -335,7 +335,7 @@ const myProjects = {
 
                 {/* Tech Stack */}
                 <div className="space-y-2">
-                  <h4 className="text-blue-400 font-mono text-xs">
+                  <h4 className="text-emerald-500 font-mono text-xs">
                     Tech Stack
                   </h4>
                   <div className="flex flex-wrap gap-2">
@@ -358,8 +358,8 @@ const myProjects = {
                     rel={project.demoUrl !== "#" ? "noopener noreferrer" : ""}
                     className={`flex-1 text-center py-2 px-4 rounded font-mono text-xs transition-all duration-300 ${
                       project.demoUrl === "#"
-                        ? "bg-blue-400/5 text-blue-400/50 cursor-not-allowed"
-                        : "bg-blue-400/10 text-blue-400 hover:bg-blue-400 hover:text-black"
+                        ? "bg-emerald-500/5 text-emerald-500/50 cursor-not-allowed"
+                        : "bg-emerald-500/10 text-emerald-500 hover:bg-emerald-500 hover:text-black"
                     }`}
                     onClick={
                       project.demoUrl === "#"

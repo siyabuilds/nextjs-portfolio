@@ -58,7 +58,7 @@ const aboutSiyabonga = {
   useEffect(() => {
     const typed = new Typed(typedRef.current, {
       strings: [
-        "Crafting digital experiences with <span class='text-blue-400'>passion</span> and <span class='text-blue-400'>precision</span><span class='text-white'>.</span>",
+        "Crafting digital experiences with <span class='text-emerald-500'>passion</span> and <span class='text-emerald-500'>precision</span><span class='text-white'>.</span>",
       ],
       typeSpeed: 50,
       startDelay: 500,
@@ -149,7 +149,7 @@ const aboutSiyabonga = {
           aria-hidden={!typingComplete}
         >
           <h2 className="text-2xl md:text-3xl font-bold text-center">
-            Technical <span className="text-blue-400">Expertise</span>
+            Technical <span className="text-emerald-500">Expertise</span>
           </h2>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -164,7 +164,7 @@ const aboutSiyabonga = {
                 transition={{ duration: 0.6, delay: 1 + index * 0.2 }}
                 className="bg-white/5 rounded-lg p-6 backdrop-blur-sm border border-white/10"
               >
-                <h3 className="text-blue-400 font-mono text-sm font-semibold mb-4">
+                <h3 className="text-emerald-500 font-mono text-sm font-semibold mb-4">
                   {skillGroup.category}
                 </h3>
                 <div className="space-y-2">
@@ -196,19 +196,19 @@ const aboutSiyabonga = {
           {/* My Journey */}
           <div className="space-y-6">
             <h2 className="text-2xl font-bold">
-              My <span className="text-blue-400">Journey</span>
+              My <span className="text-emerald-500">Journey</span>
             </h2>
             <div className="space-y-4">
-              <div className="border-l-2 border-blue-400 pl-6 space-y-4">
+              <div className="border-l-2 border-emerald-500 pl-6 space-y-4">
                 <div>
-                  <h3 className="font-mono text-blue-400 text-sm">2021</h3>
+                  <h3 className="font-mono text-emerald-500 text-sm">2021</h3>
                   <p className="text-white/80">
                     Completed Matric at Phakamani Secondary School, setting the
                     foundation for my educational journey.
                   </p>
                 </div>
                 <div>
-                  <h3 className="font-mono text-blue-400 text-sm">
+                  <h3 className="font-mono text-emerald-500 text-sm">
                     June 2024 - Dec 2024
                   </h3>
                   <p className="text-white/80">
@@ -217,7 +217,7 @@ const aboutSiyabonga = {
                   </p>
                 </div>
                 <div>
-                  <h3 className="font-mono text-blue-400 text-sm">
+                  <h3 className="font-mono text-emerald-500 text-sm">
                     April 2025 - Oct 2025
                   </h3>
                   <p className="text-white/80">
@@ -233,11 +233,11 @@ const aboutSiyabonga = {
           {/* Values & Approach */}
           <div className="space-y-6">
             <h2 className="text-2xl font-bold">
-              My <span className="text-blue-400">Approach</span>
+              My <span className="text-emerald-500">Approach</span>
             </h2>
             <div className="space-y-4">
               <div className="bg-white/5 rounded-lg p-4 border border-white/10">
-                <h3 className="font-mono text-blue-400 text-sm mb-2">
+                <h3 className="font-mono text-emerald-500 text-sm mb-2">
                   Learning Mindset
                 </h3>
                 <p className="text-white/80 text-sm">
@@ -247,7 +247,7 @@ const aboutSiyabonga = {
                 </p>
               </div>
               <div className="bg-white/5 rounded-lg p-4 border border-white/10">
-                <h3 className="font-mono text-blue-400 text-sm mb-2">
+                <h3 className="font-mono text-emerald-500 text-sm mb-2">
                   Hands-On Practice
                 </h3>
                 <p className="text-white/80 text-sm">
@@ -257,7 +257,7 @@ const aboutSiyabonga = {
                 </p>
               </div>
               <div className="bg-white/5 rounded-lg p-4 border border-white/10">
-                <h3 className="font-mono text-blue-400 text-sm mb-2">
+                <h3 className="font-mono text-emerald-500 text-sm mb-2">
                   Future Goals
                 </h3>
                 <p className="text-white/80 text-sm">
@@ -282,7 +282,7 @@ const aboutSiyabonga = {
           aria-hidden={!typingComplete}
         >
           <h2 className="text-2xl font-bold">
-            Let's <span className="text-blue-400">Connect</span>
+            Let's <span className="text-emerald-500">Connect</span>
           </h2>
           <p className="text-white/60 max-w-2xl mx-auto">
             I'm currently focused on mastering Full Stack development and would
@@ -293,7 +293,7 @@ const aboutSiyabonga = {
           <div className="flex items-center justify-center gap-4">
             <a
               href="/contact"
-              className="bg-blue-300 px-6 py-3 text-black text-sm font-mono rounded-md shadow hover:bg-blue-400 transition"
+              className="bg-slate-400 px-6 py-3 text-black text-sm font-mono rounded-md shadow hover:bg-emerald-500 transition"
               tabIndex={typingComplete ? 0 : -1}
             >
               get in touch

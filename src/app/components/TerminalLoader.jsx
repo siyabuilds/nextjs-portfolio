@@ -14,7 +14,11 @@ export function TerminalLoader({ messages, typingSpeed = 50, onComplete }) {
   // Typing effect
   useEffect(() => {
     // Show first 2 messages initially
-    if (showingInitialMessages && currentMessageIndex < 2 && messages.length >= 2) {
+    if (
+      showingInitialMessages &&
+      currentMessageIndex < 2 &&
+      messages.length >= 2
+    ) {
       const currentMessage = messages[currentMessageIndex];
 
       if (currentCharIndex < currentMessage.length) {
@@ -31,7 +35,7 @@ export function TerminalLoader({ messages, typingSpeed = 50, onComplete }) {
           setCurrentMessageIndex((prev) => prev + 1);
           setDisplayedText("");
           setCurrentCharIndex(0);
-          
+
           // If we've shown first 2 messages, stop and wait
           if (currentMessageIndex === 1) {
             setShowingInitialMessages(false);
@@ -41,7 +45,7 @@ export function TerminalLoader({ messages, typingSpeed = 50, onComplete }) {
         return () => clearTimeout(timeout);
       }
     }
-    
+
     // Continue with remaining messages after initial completion
     if (!showingInitialMessages && currentMessageIndex < messages.length) {
       const currentMessage = messages[currentMessageIndex];
@@ -60,7 +64,7 @@ export function TerminalLoader({ messages, typingSpeed = 50, onComplete }) {
           setCurrentMessageIndex((prev) => prev + 1);
           setDisplayedText("");
           setCurrentCharIndex(0);
-          
+
           // If all messages are complete, call onComplete
           if (currentMessageIndex === messages.length - 1) {
             onComplete && onComplete();
@@ -103,7 +107,11 @@ export function TerminalLoader({ messages, typingSpeed = 50, onComplete }) {
 
   // Auto-continue after showing first 2 messages (after a delay)
   useEffect(() => {
-    if (!showingInitialMessages && currentMessageIndex === 2 && messages.length > 2) {
+    if (
+      !showingInitialMessages &&
+      currentMessageIndex === 2 &&
+      messages.length > 2
+    ) {
       const timeout = setTimeout(() => {
         continueWithRemainingMessages();
       }, 1500);
@@ -124,15 +132,17 @@ export function TerminalLoader({ messages, typingSpeed = 50, onComplete }) {
         <div className="flex items-center gap-3">
           <div className="flex gap-2">
             <div className="flex space-x-1">
-              <div className="h-3 w-3 rounded-full bg-blue-500 shadow-lg shadow-blue-500/30"></div>
+              <div className="h-3 w-3 rounded-full bg-emerald-500 shadow-lg shadow-emerald-500/30"></div>
               <div className="h-3 w-3 rounded-full bg-yellow-400 shadow-lg shadow-yellow-400/30"></div>
               <div className="h-3 w-3 rounded-full bg-green-500 shadow-lg shadow-green-500/30"></div>
             </div>
-            <span className="text-xs text-gray-400 ml-2 font-semibold tracking-wider">TERMINAL</span>
+            <span className="text-xs text-gray-400 ml-2 font-semibold tracking-wider">
+              TERMINAL
+            </span>
           </div>
         </div>
         <div className="flex items-center gap-2">
-          <div className="h-2 w-2 rounded-full bg-blue-500 animate-pulse shadow-lg shadow-blue-500/30"></div>
+          <div className="h-2 w-2 rounded-full bg-emerald-500 animate-pulse shadow-lg shadow-emerald-500/30"></div>
           <span className="text-xs text-gray-500">ACTIVE</span>
         </div>
       </div>
@@ -148,33 +158,41 @@ export function TerminalLoader({ messages, typingSpeed = 50, onComplete }) {
             transition={{ duration: 0.3 }}
             className="flex items-start gap-2"
           >
-            <span className="text-blue-500 font-bold">❯</span>
+            <span className="text-emerald-500 font-bold">❯</span>
             <span className="text-green-300 leading-relaxed">{message}</span>
           </motion.div>
         ))}
-        
+
         {/* Current typing message */}
-        {(showingInitialMessages || (!showingInitialMessages && currentMessageIndex < messages.length)) && (
+        {(showingInitialMessages ||
+          (!showingInitialMessages &&
+            currentMessageIndex < messages.length)) && (
           <motion.div
             initial={{ opacity: 0, x: -10 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.3 }}
             className="flex items-start gap-2"
           >
-            <span className="text-blue-500 font-bold">❯</span>
+            <span className="text-emerald-500 font-bold">❯</span>
             <div className="flex items-center">
-              <span className="text-green-300 leading-relaxed">{displayedText}</span>
+              <span className="text-green-300 leading-relaxed">
+                {displayedText}
+              </span>
               {showCursor && (
                 <motion.span
                   animate={{ opacity: [1, 0] }}
-                  transition={{ duration: 0.5, repeat: Infinity, repeatType: "reverse" }}
-                  className="ml-0.5 w-2 h-5 bg-blue-500 inline-block shadow-lg shadow-blue-500/50"
+                  transition={{
+                    duration: 0.5,
+                    repeat: Infinity,
+                    repeatType: "reverse",
+                  }}
+                  className="ml-0.5 w-2 h-5 bg-emerald-500 inline-block shadow-lg shadow-emerald-500/50"
                 />
               )}
             </div>
           </motion.div>
         )}
-        
+
         {/* Loading indicator when waiting */}
         {!showingInitialMessages && currentMessageIndex >= messages.length && (
           <motion.div
@@ -185,28 +203,43 @@ export function TerminalLoader({ messages, typingSpeed = 50, onComplete }) {
             <div className="flex gap-1">
               <motion.div
                 animate={{ opacity: [0.3, 1] }}
-                transition={{ duration: 0.6, repeat: Infinity, repeatType: "reverse", delay: 0 }}
-                className="w-1 h-1 bg-blue-500 rounded-full"
+                transition={{
+                  duration: 0.6,
+                  repeat: Infinity,
+                  repeatType: "reverse",
+                  delay: 0,
+                }}
+                className="w-1 h-1 bg-emerald-500 rounded-full"
               />
               <motion.div
                 animate={{ opacity: [0.3, 1] }}
-                transition={{ duration: 0.6, repeat: Infinity, repeatType: "reverse", delay: 0.2 }}
-                className="w-1 h-1 bg-blue-500 rounded-full"
+                transition={{
+                  duration: 0.6,
+                  repeat: Infinity,
+                  repeatType: "reverse",
+                  delay: 0.2,
+                }}
+                className="w-1 h-1 bg-emerald-500 rounded-full"
               />
               <motion.div
                 animate={{ opacity: [0.3, 1] }}
-                transition={{ duration: 0.6, repeat: Infinity, repeatType: "reverse", delay: 0.4 }}
-                className="w-1 h-1 bg-blue-500 rounded-full"
+                transition={{
+                  duration: 0.6,
+                  repeat: Infinity,
+                  repeatType: "reverse",
+                  delay: 0.4,
+                }}
+                className="w-1 h-1 bg-emerald-500 rounded-full"
               />
             </div>
             <span className="text-xs">Process complete</span>
           </motion.div>
         )}
       </div>
-      
+
       {/* Bottom accent line */}
       <div className="mt-4 pt-3 border-t border-gray-700/30">
-        <div className="h-0.5 bg-gradient-to-r from-transparent via-blue-500 to-transparent opacity-60"></div>
+        <div className="h-0.5 bg-gradient-to-r from-transparent via-emerald-500 to-transparent opacity-60"></div>
       </div>
     </motion.div>
   );

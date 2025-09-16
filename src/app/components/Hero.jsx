@@ -35,7 +35,7 @@ const siyabonga = {
   useEffect(() => {
     const typed = new Typed(typedRef.current, {
       strings: [
-        "Building clean, modern web experiences <br />on the edge of <span class='text-blue-400'>tech</span><span class='text-white'>.</span>",
+        "Building clean, modern web experiences <br />on the edge of <span class='text-emerald-500'>tech</span><span class='text-white'>.</span>",
       ],
       typeSpeed: 50,
       startDelay: 500,
@@ -105,7 +105,7 @@ const siyabonga = {
           >
             <a
               href="/projects"
-              className="bg-blue-300 px-5 py-2 text-black text-sm font-mono rounded-md shadow hover:bg-blue-400 transition"
+              className="bg-slate-400 px-5 py-2 text-black text-sm font-mono rounded-md shadow hover:bg-emerald-500 transition"
               tabIndex={typingComplete ? 0 : -1}
             >
               view projects
