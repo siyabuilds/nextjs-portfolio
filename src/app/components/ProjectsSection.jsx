@@ -15,16 +15,16 @@ const myProjects = {
   philosophy: "Learn by doing, build by solving",
   
   upcoming: {
-    taskManager: {
-      tech: ["TypeScript", "PostgreSQL", "Docker"],
-      status: "In Development",
-      focus: "Full Stack Architecture"
+    carbontrackr: {
+      tech: ["TypeScript", "MongoDB", "Vite", "Express", "Chart.js"],
+      status: "Live",
+      focus: "Environmental Data Visualization"
     },
     
     bankingAPI: {
-      tech: ["Node.js", "Express", "REST"],
-      status: "Planning Phase", 
-      focus: "API Design & Security"
+      tech: ["Node.js", "Express", "REST", "Decimal.js"],
+      status: "In Development", 
+      focus: "API Design"
     },
     
     portfolio: {
@@ -42,12 +42,23 @@ const myProjects = {
       title: "Carbon Footprint Tracker",
       description:
         "Full-stack application for tracking and analyzing carbon footprint. Features interactive charts, user authentication, and data persistence. Frontend built with Vite/JavaScript, backend powered by Node.js/MongoDB.",
-      tech: ["Vite", "JavaScript", "Node.js", "MongoDB", "Express", "Chart.js"],
-      status: "In Development",
+      tech: ["Vite", "MongoDB", "Express", "Chart.js"],
+      status: "Live",
       category: "Full Stack",
       demoUrl: "https://carbontrackr.vercel.app",
       codeUrl: "https://github.com/siyabuilds/carbontrackr_frontend",
       image: "/carbon-footprint.png",
+    },
+    {
+      id: 2,
+      title: "Banking Mock",
+      description:
+        "Backend-focused project simulating banking operations. Practicing Express, routing, and data handling while experimenting with real-world workflows.",
+      tech: ["Node.js", "Express", "REST"],
+      status: "In Development",
+      category: "Backend",
+      demoUrl: "#",
+      codeUrl: "https://github.com/siyabuilds/banking-mock",
     },
     {
       id: 4,
