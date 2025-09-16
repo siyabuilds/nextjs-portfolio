@@ -3,8 +3,8 @@
 import React, { useState, useEffect } from "react";
 import { Highlight, themes } from "prism-react-renderer";
 
-// Create a more refined custom theme based on VS Dark
-const customTheme = JSON.parse(JSON.stringify(themes.vsDark));
+// Create a more refined custom theme based on One Dark
+const customTheme = JSON.parse(JSON.stringify(themes.oneDark));
 
 // Color palette for better syntax highlighting contrast and readability
 const propertyColor = "hsl(260, 85%, 75%)";
