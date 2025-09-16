@@ -39,27 +39,15 @@ const myProjects = {
   const projects = [
     {
       id: 1,
-      title: "Carbon Footprint Tracker (Frontend)",
+      title: "Carbon Footprint Tracker",
       description:
-        "Modern frontend application for tracking carbon footprint. Built with Vite and JavaScript, featuring interactive charts and user-friendly interface.",
-      tech: ["Vite", "JavaScript", "Chart.js"],
+        "Full-stack application for tracking and analyzing carbon footprint. Features interactive charts, user authentication, and data persistence. Frontend built with Vite/JavaScript, backend powered by Node.js/MongoDB.",
+      tech: ["Vite", "JavaScript", "Node.js", "MongoDB", "Express", "Chart.js"],
       status: "In Development",
-      category: "Frontend",
+      category: "Full Stack",
       demoUrl: "https://carbontrackr.vercel.app",
       codeUrl: "https://github.com/siyabuilds/carbontrackr_frontend",
       image: "/carbon-footprint.png",
-    },
-    {
-      id: 2,
-      title: "Carbon Footprint Tracker (Backend)",
-      description:
-        "Robust backend API for the Carbon Footprint Tracker. Handles data processing, storage, and provides RESTful endpoints for the frontend.",
-      tech: ["Node.js", "MongoDB", "Express"],
-      status: "In Development",
-      category: "Backend",
-      demoUrl: "https://carbontrackr-lfwd.onrender.com/",
-      codeUrl: "https://github.com/siyabuilds/carbontrackr",
-      image: "/carbontrackr.png",
     },
     {
       id: 4,
