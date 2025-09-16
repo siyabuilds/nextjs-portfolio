@@ -16,19 +16,19 @@ const siyabonga = {
   mission: "Crafting accessible and intelligent digital experiences.",
   affiliation: "Umuzi Experience Labs",
   techStack: {
-    frontend: ["React", "Next.js", "ShadCN", "Framer Motion"],
-    backend: ["Node.js", "PostgreSQL", "Docker"],
-    devOps: ["GitHub Actions", "DigitalOcean", "Azure"],
+    frontend: ["Vite", "Next.js", "Tailwind CSS", "Framer Motion"],
+    backend: ["Node.js", "MongoDB", "Express"],
+    devOps: ["GitHub Actions", "DigitalOcean", "Docker"],
   },
   featuredProjects: [
-    "Task Manager (TypeScript + PostgreSQL + Docker)",
-    "Mock Banking API",
+    "CarbonTrackr (TypeScript + MongoDB + Vite + Express + Chart.js)",
+    "Mock Banking API (Node.js + Express + REST + Decimal.js)",
   ],
-  focusAreas: ["TypeScript", "Design Thinking", "Modern UI/UX"],
+  focusAreas: ["TypeScript", "API Design & Security", "Modern UI/UX"],
   roadmap: [
-    "Launch Task Manager",
+    "Launch Banking API",
     "Dockerize and Deploy",
-    "Contribute to Open Source",
+    "Contribute to GitHub Open Source Projects",
   ],
 };`;
 
