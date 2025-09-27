@@ -26,6 +26,8 @@
     "@tailwindcss/postcss": "^4",
     "eslint": "^9",
     "eslint-config-next": "15.3.4",
-    "tailwindcss": "^4"
+    "tailwindcss": "^4",
+    "axios": "^1.7.2",
+    "mongodb": "^6.8.0"
   }
 }
