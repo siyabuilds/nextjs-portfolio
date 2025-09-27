@@ -1,0 +1,29 @@
+name: Daily Quote Updater (with AI summary)
+
+on:
+  schedule:
+    - cron: "0 5 * * *" # Runs daily at 05:00 UTC (07:00 SAST)
+  workflow_dispatch: {} # Manual trigger support
+
+jobs:
+  update-quote:
+    runs-on: ubuntu-latest
+    steps:
+      # Step 1: Checkout the repo
+      - uses: actions/checkout@v4
+
+      # Step 2: Set up Node.js
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "18"
+
+      # Step 3: Install dependencies
+      - run: npm install axios mongodb
+
+      # Step 4: Run the update script
+      - name: Run Daily Quote Update
+        env:
+          API_NINJAS_KEY: ${{ secrets.API_NINJAS_KEY }}
+          MONGO_URI: ${{ secrets.MONGO_URI }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        run: node .github/workflows/updateQuote.mjs
