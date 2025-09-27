@@ -24,6 +24,6 @@ jobs:
       - name: Run Daily Quote Update
         env:
           API_NINJA_KEY: ${{ secrets.API_NINJA_KEY }}
-          MONGO_URI: ${{ secrets.MONGO_URI }}
+          MONGODB_URI: ${{ secrets.MONGODB_URI }}
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
         run: node .github/workflows/updateQuote.mjs
