@@ -1,7 +1,7 @@
 import axios from "axios";
 
 export async function fetchQuote() {
-  const apiKey = process.env.API_NINJAS_KEY;
+  const apiKey = process.env.API_NINJA_KEY;
 
   try {
     const res = await axios.get("https://api.api-ninjas.com/v1/quotes", {
