@@ -17,7 +17,7 @@ async function main() {
   const client = new MongoClient(process.env.MONGODB_URI);
   await client.connect();
   await client
-    .db("quotesDB")
+    .db("quotesdb")
     .collection("dailyQuotes")
     .updateOne({ date: today }, { $set: doc }, { upsert: true });
   console.log("Updated daily quote:", doc);
