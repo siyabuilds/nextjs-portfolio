@@ -188,9 +188,9 @@ export default function ChatPage() {
   };
 
   return (
-    <div className="min-h-screen bg-black text-white flex flex-col">
+    <div className="h-screen bg-black text-white flex flex-col">
       {/* Header */}
-      <div className="bg-gray-900 border-b border-gray-800 p-4 mt-6">
+      <div className="bg-gray-900 border-b border-gray-800 p-4 top-14 z-10 mt-6 w-full">
         <div className="max-w-4xl mx-auto flex justify-between items-center">
           <div>
             <h1 className="text-2xl font-bold text-emerald-500 font-mono">
@@ -284,8 +284,8 @@ export default function ChatPage() {
         </div>
       </div>
 
-      {/* Input Area */}
-      <div className="bg-gray-900 border-t border-gray-800 p-4">
+      {/* Fixed Input Area */}
+      <div className="bg-gray-900 border-t border-gray-800 p-4 sticky bottom-8 z-10">
         <div className="max-w-4xl mx-auto">
           <form onSubmit={sendMessage} className="flex space-x-2">
             <input
