@@ -7,10 +7,13 @@ import {
   FiExternalLink,
   FiGithub,
   FiLoader,
+  FiUsers,
+  FiCalendar,
 } from "react-icons/fi";
 
 const GitHubRepos = () => {
   const [repos, setRepos] = useState([]);
+  const [userData, setUserData] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
@@ -26,6 +29,7 @@ const GitHubRepos = () => {
 
         const data = await response.json();
         setRepos(data.repos || []);
+        setUserData(data.user || null);
       } catch (err) {
         console.error("Error fetching repos:", err);
         setError(err.message);
@@ -77,6 +81,14 @@ const GitHubRepos = () => {
     return colors[language] || "bg-gray-400";
   };
 
+  const getYearsOnGitHub = (createdAt) => {
+    if (!createdAt) return null;
+    const created = new Date(createdAt);
+    const now = new Date();
+    const years = Math.floor((now - created) / (365.25 * 24 * 60 * 60 * 1000));
+    return years;
+  };
+
   if (loading) {
     return (
       <div className="text-center space-y-6 bg-white/5 rounded-lg p-8 backdrop-blur-sm border border-white/10">
@@ -119,6 +131,30 @@ const GitHubRepos = () => {
           repository represents a journey of learning, building, and sharing
           knowledge.
         </p>
+        {userData && (
+          <div className="flex flex-wrap items-center justify-center gap-6 mt-6">
+            <div className="flex items-center space-x-2 text-emerald-500">
+              <FiUsers className="text-lg" />
+              <span className="text-sm font-mono">
+                {userData.followers} followers
+              </span>
+            </div>
+            <div className="flex items-center space-x-2 text-white/60">
+              <FiGithub className="text-lg" />
+              <span className="text-sm font-mono">
+                {userData.publicRepos} repositories
+              </span>
+            </div>
+            {userData.createdAt && (
+              <div className="flex items-center space-x-2 text-blue-400">
+                <FiCalendar className="text-lg" />
+                <span className="text-sm font-mono">
+                  {getYearsOnGitHub(userData.createdAt)} years on GitHub
+                </span>
+              </div>
+            )}
+          </div>
+        )}
       </div>
 
       {/* Repositories Grid */}
