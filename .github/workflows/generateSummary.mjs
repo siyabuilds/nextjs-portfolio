@@ -1,20 +1,20 @@
 import axios from "axios";
 
 export async function generateSummary(quote, author) {
-  const prompt = `Explain the following quote in terms of today's technology landscape (cloud, AI, web dev, DevOps, security). Keep it concise (2-4 sentences).\n\nQuote: "${quote}"\nAuthor: "${
+  const prompt = `In 2-3 sentences, relate this quote to modern tech (AI, cloud, DevOps): "${quote}" - ${
     author || "Unknown"
-  }"`;
+  }`;
 
   try {
     const res = await axios.post(
       "https://api.openai.com/v1/chat/completions",
       {
-        model: "gpt-3.5-turbo",
+        model: "gpt-4.1",
         messages: [
           {
             role: "system",
             content:
-              "You are an expert in explaining quotes in the context of modern technology.",
+              "You are an expert in explaining quotes in the context of modern technology. Be concise and punchy.",
           },
           {
             role: "user",
@@ -22,7 +22,7 @@ export async function generateSummary(quote, author) {
           },
         ],
         temperature: 0.7,
-        max_tokens: 150,
+        max_tokens: 80,
       },
       { headers: { Authorization: `Bearer ${process.env.OPENAI_API_KEY}` } }
     );
