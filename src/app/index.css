@@ -1,14 +1,16 @@
 @import "tailwindcss";
 
-/* IBM Plex font variables */
+/* Suse font variables */
 :root {
-  --font-ibm-sans: "IBM Plex Sans", system-ui, sans-serif;
-  --font-ibm-mono: "IBM Plex Mono", "Courier New", monospace;
+  --font-suse: "SUSE", system-ui, sans-serif;
+  --font-suse-mono: "SUSE Mono", "Fira Code", "JetBrains Mono", "SF Mono",
+    "Monaco", "Inconsolata", "Roboto Mono", "Source Code Pro", "Courier New",
+    monospace;
 }
 
 /* Custom styles */
 body {
   background-color: #000;
   min-height: 100vh;
-  font-family: var(--font-ibm-sans);
+  font-family: var(--font-suse);
 }
