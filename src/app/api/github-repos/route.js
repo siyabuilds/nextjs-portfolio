@@ -13,7 +13,7 @@ export async function GET() {
 
     // List of repository names you want to display
     const repoNames = [
-      "carbon-footprint-tracker",
+      "carbon-footprint-logger",
       "nextjs-portfolio",
       "word-unscrambler",
       "banking-mock",
