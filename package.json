@@ -13,7 +13,7 @@
     "@vercel/analytics": "^1.5.0",
     "animejs": "^4.1.2",
     "framer-motion": "^12.19.2",
-    "next": "15.3.4",
+    "next": "^15.5.4",
     "openai": "^5.10.1",
     "prism-react-renderer": "^2.4.1",
     "react": "^19.0.0",
@@ -24,10 +24,10 @@
   "devDependencies": {
     "@eslint/eslintrc": "^3",
     "@tailwindcss/postcss": "^4",
+    "axios": "^1.7.2",
     "eslint": "^9",
     "eslint-config-next": "15.3.4",
-    "tailwindcss": "^4",
-    "axios": "^1.7.2",
-    "mongodb": "^6.8.0"
+    "mongodb": "^6.8.0",
+    "tailwindcss": "^4"
   }
 }
