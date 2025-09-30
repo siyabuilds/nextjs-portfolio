@@ -16,7 +16,7 @@ export async function GET() {
       "carbon-footprint-logger",
       "nextjs-portfolio",
       "word-unscrambler",
-      "banking-mock",
+      "ai_powered_devblog",
     ];
 
     const username = "siyabuilds";
