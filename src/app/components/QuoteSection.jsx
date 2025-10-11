@@ -78,7 +78,7 @@ const QuoteSection = () => {
       transition={{ duration: 0.8 }}
       className="space-y-6"
     >
-      <h2 className="text-2xl md:text-3xl font-bold text-center">
+      <h2 className="text-2xl md:text-3xl font-bold text-center text-white">
         Daily <span className="text-emerald-500">Philosophy</span>
       </h2>
 
