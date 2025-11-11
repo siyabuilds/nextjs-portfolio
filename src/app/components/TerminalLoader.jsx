@@ -2,52 +2,40 @@
 
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
+import { XMarkIcon } from "@heroicons/react/24/outline";
 
-export function TerminalLoader({ messages, typingSpeed = 50, onComplete }) {
+export function TerminalLoader({
+  mode = "alert", // "alert" or "typing"
+  messages = [],
+  typingSpeed = 50,
+  onComplete,
+  onClose,
+}) {
+  const [isVisible, setIsVisible] = useState(true);
+
+  // Typing mode states
   const [currentMessageIndex, setCurrentMessageIndex] = useState(0);
   const [displayedText, setDisplayedText] = useState("");
   const [currentCharIndex, setCurrentCharIndex] = useState(0);
   const [showCursor, setShowCursor] = useState(true);
   const [completedMessages, setCompletedMessages] = useState([]);
-  const [showingInitialMessages, setShowingInitialMessages] = useState(true);
 
-  // Typing effect
-  useEffect(() => {
-    // Show first 2 messages initially
-    if (
-      showingInitialMessages &&
-      currentMessageIndex < 2 &&
-      messages.length >= 2
-    ) {
-      const currentMessage = messages[currentMessageIndex];
-
-      if (currentCharIndex < currentMessage.length) {
-        const timeout = setTimeout(() => {
-          setDisplayedText((prev) => prev + currentMessage[currentCharIndex]);
-          setCurrentCharIndex((prev) => prev + 1);
-        }, typingSpeed);
-
-        return () => clearTimeout(timeout);
-      } else {
-        // Complete current message
-        const timeout = setTimeout(() => {
-          setCompletedMessages((prev) => [...prev, displayedText]);
-          setCurrentMessageIndex((prev) => prev + 1);
-          setDisplayedText("");
-          setCurrentCharIndex(0);
-
-          // If we've shown first 2 messages, stop and wait
-          if (currentMessageIndex === 1) {
-            setShowingInitialMessages(false);
-          }
-        }, 800);
-
-        return () => clearTimeout(timeout);
-      }
+  const handleClose = () => {
+    setIsVisible(false);
+    if (onClose) {
+      setTimeout(onClose, 300);
     }
+  };
 
-    // Continue with remaining messages after initial completion
-    if (!showingInitialMessages && currentMessageIndex < messages.length) {
+  const handleGoToNewPortfolio = () => {
+    window.location.href = "https://samson.codes";
+  };
+
+  // Typing effect for form submission mode
+  useEffect(() => {
+    if (mode !== "typing" || !messages.length) return;
+
+    if (currentMessageIndex < messages.length) {
       const currentMessage = messages[currentMessageIndex];
 
       if (currentCharIndex < currentMessage.length) {
@@ -75,50 +63,124 @@ export function TerminalLoader({ messages, typingSpeed = 50, onComplete }) {
       }
     }
   }, [
+    mode,
     currentMessageIndex,
     currentCharIndex,
     messages,
     typingSpeed,
     onComplete,
-    showingInitialMessages,
     displayedText,
   ]);
 
-  // Blinking cursor
+  // Blinking cursor for typing mode
   useEffect(() => {
+    if (mode !== "typing") return;
+
     const interval = setInterval(() => {
       setShowCursor((prev) => !prev);
     }, 500);
 
     return () => clearInterval(interval);
-  }, []);
+  }, [mode]);
 
-  // Add method to continue with remaining messages
-  const continueWithRemainingMessages = () => {
-    if (!showingInitialMessages) return;
-    setShowingInitialMessages(false);
-    if (currentMessageIndex < messages.length) {
-      // Reset for next message if we have more
-      setCurrentMessageIndex(Math.max(2, currentMessageIndex));
-      setDisplayedText("");
-      setCurrentCharIndex(0);
-    }
-  };
+  if (!isVisible) return null;
 
-  // Auto-continue after showing first 2 messages (after a delay)
-  useEffect(() => {
-    if (
-      !showingInitialMessages &&
-      currentMessageIndex === 2 &&
-      messages.length > 2
-    ) {
-      const timeout = setTimeout(() => {
-        continueWithRemainingMessages();
-      }, 1500);
-      return () => clearTimeout(timeout);
-    }
-  }, [showingInitialMessages, currentMessageIndex, messages.length]);
+  // Alert Mode (for landing page)
+  if (mode === "alert") {
+    return (
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        exit={{ opacity: 0, y: -20 }}
+        transition={{ duration: 0.5, ease: "easeOut" }}
+        className="bg-gradient-to-br from-gray-900 via-black to-gray-800 text-green-400 p-6 rounded-2xl font-mono text-sm md:text-base w-full max-w-lg shadow-2xl border border-gray-700/50 backdrop-blur-sm"
+      >
+        {/* Terminal Header */}
+        <div className="flex items-center justify-between mb-4 pb-3 border-b border-gray-700/30">
+          <div className="flex items-center gap-3">
+            <div className="flex gap-2">
+              <div className="flex space-x-1">
+                <div className="h-3 w-3 rounded-full bg-red-500 shadow-lg shadow-red-500/30"></div>
+                <div className="h-3 w-3 rounded-full bg-yellow-400 shadow-lg shadow-yellow-400/30"></div>
+                <div className="h-3 w-3 rounded-full bg-green-500 shadow-lg shadow-green-500/30"></div>
+              </div>
+              <span className="text-xs text-gray-400 ml-2 font-semibold tracking-wider">
+                ALERT
+              </span>
+            </div>
+          </div>
+          <button
+            onClick={handleClose}
+            className="text-gray-400 hover:text-white transition-colors duration-200 p-1 rounded-md hover:bg-gray-700/50"
+            aria-label="Close alert"
+          >
+            <XMarkIcon className="h-5 w-5" />
+          </button>
+        </div>
 
+        {/* Terminal Content */}
+        <div className="space-y-4">
+          {/* Alert Message */}
+          <motion.div
+            initial={{ opacity: 0, x: -10 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.3 }}
+            className="space-y-3"
+          >
+            <div className="flex items-start gap-2">
+              <span className="text-yellow-500 font-bold text-xl">⚠</span>
+              <div className="flex-1">
+                <h3 className="text-yellow-400 font-bold text-lg mb-2">
+                  New Portfolio Available!
+                </h3>
+                <p className="text-green-300 leading-relaxed">
+                  I've launched a brand new portfolio at{" "}
+                  <span className="text-cyan-400 font-semibold">
+                    samson.codes
+                  </span>
+                </p>
+                <p className="text-gray-400 text-xs mt-2">
+                  Check out the latest version with updated projects and
+                  features.
+                </p>
+              </div>
+            </div>
+          </motion.div>
+
+          {/* Action Buttons */}
+          <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.3, delay: 0.2 }}
+            className="flex flex-col sm:flex-row gap-3 pt-2"
+          >
+            <button
+              onClick={handleGoToNewPortfolio}
+              className="flex-1 bg-gradient-to-r from-emerald-600 to-green-600 hover:from-emerald-500 hover:to-green-500 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 shadow-lg shadow-emerald-500/30 hover:shadow-emerald-500/50 transform hover:scale-105"
+            >
+              <span className="flex items-center justify-center gap-2">
+                <span>Yes, Go To!</span>
+                <span className="text-lg">→</span>
+              </span>
+            </button>
+            <button
+              onClick={handleClose}
+              className="flex-1 bg-gray-700 hover:bg-gray-600 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 shadow-lg shadow-gray-700/30 hover:shadow-gray-600/50"
+            >
+              Stay Here
+            </button>
+          </motion.div>
+        </div>
+
+        {/* Bottom accent line */}
+        <div className="mt-4 pt-3 border-t border-gray-700/30">
+          <div className="h-0.5 bg-gradient-to-r from-transparent via-yellow-500 to-transparent opacity-60"></div>
+        </div>
+      </motion.div>
+    );
+  }
+
+  // Typing Mode (for form submission feedback)
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -164,9 +226,7 @@ export function TerminalLoader({ messages, typingSpeed = 50, onComplete }) {
         ))}
 
         {/* Current typing message */}
-        {(showingInitialMessages ||
-          (!showingInitialMessages &&
-            currentMessageIndex < messages.length)) && (
+        {currentMessageIndex < messages.length && (
           <motion.div
             initial={{ opacity: 0, x: -10 }}
             animate={{ opacity: 1, x: 0 }}
@@ -193,8 +253,8 @@ export function TerminalLoader({ messages, typingSpeed = 50, onComplete }) {
           </motion.div>
         )}
 
-        {/* Loading indicator when waiting */}
-        {!showingInitialMessages && currentMessageIndex >= messages.length && (
+        {/* Loading indicator when complete */}
+        {currentMessageIndex >= messages.length && (
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
